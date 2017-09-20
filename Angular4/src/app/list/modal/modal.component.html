@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true"></span>
+      </button>
+</div>
+<div class="modal-body">
+
+    <ul *ngIf="product != null">
+        <h4> Id: {{ product.Id }} </h4>
+        <h4> Name: {{ product.Name }} </h4>
+        <h4> Description: {{ product.Descricao }} </h4>
+        <h4> Code: {{ product.Codigo }} </h4>
+        <h4> Price: {{ product.Preco }} </h4>
+        <h4> Email: {{ product.Email }} </h4>
+    </ul>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Close</button>
+</div>
