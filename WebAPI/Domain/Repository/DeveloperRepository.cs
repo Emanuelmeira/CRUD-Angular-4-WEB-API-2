@@ -1,6 +1,7 @@
 ﻿using Domain.Context;
 using Domain.Entities;
 using Domain.Exceptions;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,7 +11,7 @@ using System.Web;
 
 namespace Domain.Repository
 {
-    public class DeveloperRepository
+    public class DeveloperRepository : IRepository<Developer>
     {                
         private EFContext Context;
 
@@ -20,11 +21,18 @@ namespace Domain.Repository
         }
 
         //Get all Developers
-        public IQueryable<Developer> GetDevelopers()
+        public List<Developer> GetAll()
         {
             try
             {
-                return Context.Developers;
+               IQueryable<Developer> query = Context.Developers;
+
+               var item =  query.Include(b => b.BankInformation)
+                                .Include(k => k.Knowledge)
+                                .ToList();                
+
+               return item;
+
             }
             catch (Exception ex)
             {
@@ -33,7 +41,7 @@ namespace Domain.Repository
         }
 
         //Post Developer
-        public void PostDeveloper(Developer Developer)
+        public void Save(Developer Developer)
         {
             try
             {
@@ -47,7 +55,7 @@ namespace Domain.Repository
         }
 
         //Put Developer
-        public void UpdateDeveloper(Developer Developer)
+        public void Update(Developer Developer)
         {
 
             try
@@ -63,10 +71,11 @@ namespace Domain.Repository
         }
 
         //GET Developer
-        public Developer GetDeveloper(int id)
+        public Developer GetById(int id)
         {
             try
-            {
+            {                
+                               
                 Developer Developer = GetDeveloperById(id);
                 return Developer;
                 
@@ -78,7 +87,7 @@ namespace Domain.Repository
         }
 
         //DELETE Developer
-        public Developer DeleteDeveloper(int id)
+        public Developer Delete(int id)
         {
             try
             {
@@ -99,12 +108,17 @@ namespace Domain.Repository
             }
         }
 
-
         private Developer GetDeveloperById(int id)
         {
             try
             {
-                Developer Developer = Context.Developers.Find(id);
+
+                IQueryable<Developer> query = Context.Developers;
+
+                var Developer = query.Where(x => x.Id == id)
+                                     .Include(b => b.BankInformation)
+                                     .Include(k => k.Knowledge)
+                                     .FirstOrDefault();
                 return Developer;
             }
             catch (Exception ex)
@@ -114,6 +128,6 @@ namespace Domain.Repository
         }
 
 
-    
+
     }
 }

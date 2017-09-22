@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Exceptions;
-using Domain.Services;
+using WebApiAngular.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace WebApiAngular.Controllers
         {
             try
             {
-                return Ok(DeveloperService.getDevelopers());
+                return Ok(DeveloperService.GetAll());
             }
             catch (RepositoryException ex)
             {
@@ -45,7 +45,7 @@ namespace WebApiAngular.Controllers
                     return BadRequest(ModelState);
                 }
 
-                DeveloperService.PostDeveloper(Developer);
+                DeveloperService.Save(Developer);
 
                 return CreatedAtRoute("DefaultApi", new { id = Developer.Id }, Developer);                
             }
@@ -66,7 +66,7 @@ namespace WebApiAngular.Controllers
                     return BadRequest(ModelState);
                 }
                         
-                DeveloperService.UpdateDeveloper(Developer);
+                DeveloperService.Update(Developer);
 
                 return Ok(Developer);               
             }
@@ -83,7 +83,7 @@ namespace WebApiAngular.Controllers
         {
             try
             {
-                Developer Developer = DeveloperService.GetDeveloper(id);
+                Developer Developer = DeveloperService.GetById(id);
 
                 if (Developer == null)
                 {
@@ -103,7 +103,7 @@ namespace WebApiAngular.Controllers
         {
             try
             {
-                Developer Developer = DeveloperService.DeleteDeveloper(id);
+                Developer Developer = DeveloperService.Delete(id);
 
                 if (Developer == null)
                 {

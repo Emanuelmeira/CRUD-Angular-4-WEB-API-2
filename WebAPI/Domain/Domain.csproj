@@ -52,16 +52,14 @@
     <Compile Include="Entities\Developer.cs" />
     <Compile Include="Entities\Knowledge.cs" />
     <Compile Include="Exceptions\RepositoryExeption.cs" />
+    <Compile Include="Interfaces\IDeveloperRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\DeveloperRepository.cs" />
-    <Compile Include="Services\DeveloperService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

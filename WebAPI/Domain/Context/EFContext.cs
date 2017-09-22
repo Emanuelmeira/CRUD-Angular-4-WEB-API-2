@@ -10,12 +10,12 @@ namespace Domain.Context
     public class EFContext : DbContext
     {        
         public EFContext() : base("CRUD-EASY")
-        {
+        {           
         }
         
-        public DbSet<Developer> Developers { get; set; }
-        public DbSet<Knowledge> Knowledge { get; set; }
-        public DbSet<BankInformation> BankInformation { get; set; }
+        public IDbSet<Developer> Developers { get; set; }
+        public IDbSet<Knowledge> Knowledge { get; set; }
+        public IDbSet<BankInformation> BankInformation { get; set; }
         
 
         //Factory para contexto

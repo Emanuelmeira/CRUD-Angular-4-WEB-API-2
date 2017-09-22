@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebApiAngular.Interfaces.Services;
 
-namespace Domain.Services
+namespace WebApiAngular.Services
 {
-    public class DeveloperService
+    public class DeveloperService : IService<Developer>
     {
         private DeveloperRepository DeveloperRepository;
 
@@ -18,11 +19,11 @@ namespace Domain.Services
         }
 
         //GET all Developers
-        public IQueryable<Developer> getDevelopers()
+        public List<Developer> GetAll()
         {
             try
             {             
-                 return DeveloperRepository.GetDevelopers();
+                 return DeveloperRepository.GetAll();
             }
             catch (RepositoryException ex)
             {
@@ -31,11 +32,11 @@ namespace Domain.Services
         }
         
         //ADD Developer
-        public void PostDeveloper(Developer Developer)
+        public void Save(Developer Developer)
         {
             try
             {                
-                DeveloperRepository.PostDeveloper(Developer);             
+                DeveloperRepository.Save(Developer);             
             }
             catch (RepositoryException ex)
             {
@@ -44,11 +45,11 @@ namespace Domain.Services
         }
 
         //UPDATE Developer
-        public void UpdateDeveloper(Developer Developer)
+        public void Update(Developer Developer)
         {
             try
             {
-                DeveloperRepository.UpdateDeveloper(Developer);                
+                DeveloperRepository.Update(Developer);                
             }
             catch (RepositoryException ex)
             {
@@ -57,11 +58,11 @@ namespace Domain.Services
         }
 
         //GET Developer
-        public Developer GetDeveloper(int id)
+        public Developer GetById(int id)
         {
             try
             {
-                return DeveloperRepository.GetDeveloper(id);               
+                return DeveloperRepository.GetById(id);               
             }
             catch (RepositoryException ex)
             {
@@ -70,11 +71,11 @@ namespace Domain.Services
         }
 
         //DELETE Developer
-        public Developer DeleteDeveloper(int id)
+        public Developer Delete(int id)
         {
             try
             {
-                return DeveloperRepository.DeleteDeveloper(id);                   
+                return DeveloperRepository.Delete(id);                   
             }
             catch (RepositoryException ex)
             {

@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 namespace Domain.Entities
 {
     public class Developer
-    {
-        
-        public Developer()
-        {
-            BankInformation = new BankInformation();
-            Knowledge = new Knowledge();
-        }
+    {       
         
         public int Id { get; set; }
 
@@ -42,17 +36,15 @@ namespace Domain.Entities
         public bool NightPeriod { get; set; }
         public bool DawnPeriod { get; set; }
         
-        public int Pretension { get; set; }
-
-        public int? KnowledgeId { get; set; }
-        public Knowledge Knowledge { get; set; }
-
-        public string Bank { get; set; }
-
-        public int? BankInformationId { get; set; }
-        public BankInformation BankInformation { get; set; }
-
+        public int Pretension { get; set; }        
+        public string Bank { get; set; }        
         public string Crud { get; set; }
 
+        public int BankInformationId { get; set; }
+        public BankInformation BankInformation { get; set; }
+
+        public int KnowledgeId { get; set; }
+        public Knowledge Knowledge { get; set; }
+        
     }
 }
