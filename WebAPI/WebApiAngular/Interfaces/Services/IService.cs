@@ -13,8 +13,6 @@ namespace WebApiAngular.Interfaces.Services
         void Update(T Entity);
         T GetById(int id);
         T Delete(int id);
-
-
-
+        
     }
 }
