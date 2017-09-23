@@ -6,6 +6,8 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
 
 import { Response} from "@angular/http";
 
+import { TabsetComponent } from 'ngx-bootstrap';
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -75,5 +77,6 @@ export class FormComponent implements OnInit {
   reset(){
     this.form.reset();
   }
-  
+ 
+ 
 }

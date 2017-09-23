@@ -6,6 +6,8 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 //import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { ModalComponent } from "./modal/modal.component";
+import { Developer } from "app/model/developer.model";
+import { DeveloperService } from "app/model/developer.service";
 
 @Component({
   selector: 'app-list',
@@ -15,17 +17,20 @@ import { ModalComponent } from "./modal/modal.component";
 export class ListComponent implements OnInit {
 
   products: Product[];
+  developers: Developer[]; //aa
   product: Product;
   bsModalRef: BsModalRef;
 
   constructor(
     private ProductService: ProductService,
+    private DeveloperService: DeveloperService,
     private modalService: BsModalService
   ) { }
 
   ngOnInit() {
-      this.ProductService.getProducts().then((response) => {
-      this.products = response;      
+      this.DeveloperService.getAll().then((response) => {
+      this.developers = response;   
+      console.log(this.developers);  
     }); 
   }
 

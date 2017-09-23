@@ -16,6 +16,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { ModalModule } from 'ngx-bootstrap/modal';
 //meu modal
 import { ModalComponent } from "app/list/modal/modal.component";
+import { DeveloperService } from "app/model/developer.service";
+
 
 @NgModule({
   declarations: [

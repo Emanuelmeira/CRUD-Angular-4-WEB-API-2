@@ -5,11 +5,17 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { ProductService } from "app/model/product.service";
 import { HttpModule } from "@angular/http";
 
+import { TabsModule } from 'ngx-bootstrap';
+import { DeveloperService } from "app/model/developer.service";
+
+
 @NgModule({
   imports: [
      CommonModule,
      ReactiveFormsModule,
-     HttpModule             
+     HttpModule,
+     TabsModule.forRoot()
+       
   ],
   declarations: [
     FormComponent,    
@@ -17,6 +23,6 @@ import { HttpModule } from "@angular/http";
   exports: [
     FormComponent
   ],
-  providers: [ProductService]
+  providers: [ProductService, DeveloperService]
 })
 export class FormModule { }
