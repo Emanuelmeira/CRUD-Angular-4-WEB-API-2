@@ -16,7 +16,7 @@ import { TabsetComponent } from 'ngx-bootstrap';
 export class FormComponent implements OnInit {
   
   form: FormGroup;
-  product = new Product();    
+  product = new Product();
   title: string;
   id: number = 0;
  
@@ -41,7 +41,7 @@ export class FormComponent implements OnInit {
           email: [null]
         });
 
-        this.title = this.id ? 'Edit Product' : 'New Product';
+        this.title = this.id ? 'Edit Developer' : 'New Developer';
 
         if(this.id != undefined) this.onEdit(this.id);   
   }

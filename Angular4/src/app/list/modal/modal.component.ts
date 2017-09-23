@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from "ngx-bootstrap/modal";
 import { Product } from "app/model/product.model";
+import { Developer } from "app/model/developer.model";
 
 
 @Component({
@@ -10,8 +11,8 @@ import { Product } from "app/model/product.model";
 })
 export class ModalComponent implements OnInit {
 
-  title: string;
-  product = new  Product();
+  title: string;  
+  developer = new Developer();
  
   constructor(private bsModalRef: BsModalRef) { }
 

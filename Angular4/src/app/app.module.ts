@@ -17,6 +17,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 //meu modal
 import { ModalComponent } from "app/list/modal/modal.component";
 import { DeveloperService } from "app/model/developer.service";
+import { DetailsComponent } from "app/list/details/details.component";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DeveloperService } from "app/model/developer.service";
     AppComponent,
     NavbarComponent,
     ListComponent,
-    ModalComponent
+    ModalComponent,
+    DetailsComponent 
 
   ],
   imports: [

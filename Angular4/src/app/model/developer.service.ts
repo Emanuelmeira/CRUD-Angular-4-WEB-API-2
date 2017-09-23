@@ -53,7 +53,7 @@ export class DeveloperService {
 
  
     // GET product
-    get(id: number): Promise<Developer>{
+    getById(id: number): Promise<Developer>{
        
       return  this.http.get(this.getUrl(id), this.options )
               .toPromise()

@@ -5,6 +5,7 @@ import { ListComponent } from './list.component';
 import { ModalComponent } from './modal/modal.component';
 
 import { BsModalService } from 'ngx-bootstrap/modal';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { BsModalService } from 'ngx-bootstrap/modal';
   ],
   declarations: [
     ListComponent,
-    ModalComponent
+    ModalComponent,
+    DetailsComponent
     
   ],
   providers: [

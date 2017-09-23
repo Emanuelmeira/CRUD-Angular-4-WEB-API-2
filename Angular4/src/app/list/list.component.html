@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-2">
-            <h3>Product Listing</h3>
+        <div class="col-sm-4 ">
+            <h3>Developer Listing</h3>
         </div>
     </div>
 </div>
@@ -9,44 +9,51 @@
 <div class="container-fluid">
     <div class="row">
 
-        <div class="col-sm-10  col-sm-offset-2">
+        <div class="col-sm-12  ">
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Code</th>
-                        <th>Price</th>
+                        <th>Skype</th>
+                        <th>Phone</th>
+                        <th>Linkedin</th>
                         <th>Email</th>
+                        <th>City</th>
+                        <th>State</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products">
-                        <th scope="row">{{ product.Id }}</th>
-                        <td>{{ product.Name }}</td>
-                        <td>{{ product.Descricao }}</td>
-                        <td>{{ product.Codigo }}</td>
-                        <td>{{ product.Preco }}</td>
-                        <td>{{ product.Email }}</td>
-                        <td><button class="btn btn-primary" [routerLink]="['/save', product.Id]">
+                    <tr *ngFor="let developer of developers">
+                        <th scope="row">{{ developer.Id }}</th>
+                        <td>{{ developer.Name }}</td>
+                        <td>{{ developer.Skype }}</td>
+                        <td>{{ developer.Phone }}</td>
+                        <td>{{ developer.Linkedin }}</td>
+                        <td>{{ developer.Email }}</td>
+                        <td>{{ developer.City }}</td>
+                        <td>{{ developer.State }}</td>
+
+                        <td><button class="btn btn-primary" [routerLink]="['/save', developer.Id]">
                                  <i class="glyphicon glyphicon-pencil"></i>
                             </button> |
-                            <button (click)="onDetails(product.Id)" class="btn btn-info">
+                            <button class="btn btn-info" [routerLink]="['/details', developer.Id]">
                                     <i class="glyphicon glyphicon-zoom-in"></i>    
                             </button> |
-                            <button (click)="onDelete(product.Name, product.Id )" class="btn btn-danger">
+                            <button (click)="onDelete(developer.Name, developer.Id )" class="btn btn-danger">
                                     <i class="glyphicon glyphicon-trash"></i>
                             </button>
                         </td>
                     </tr>
-                    <tr *ngIf="products==null">
-                        <p>Products not found </p>
-                    </tr>
+
                 </tbody>
             </table>
+
+            <h3 *ngIf="developers == null"> Developer Not Found </h3>
+
+            <hr>
             <button [routerLink]="['/save']" class="btn btn-info">
                     <i class="glyphicon glyphicon-plus"></i>
             </button>

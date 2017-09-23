@@ -1,5 +1,4 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Product } from "app/model/product.model";
 import { ProductService } from "app/model/product.service";
 
 import { BsModalService } from 'ngx-bootstrap/modal';
@@ -16,9 +15,10 @@ import { DeveloperService } from "app/model/developer.service";
 })
 export class ListComponent implements OnInit {
 
-  products: Product[];
-  developers: Developer[]; //aa
-  product: Product;
+  
+  developers: Developer[];
+  developer: Developer;  
+  
   bsModalRef: BsModalRef;
 
   constructor(
@@ -35,18 +35,18 @@ export class ListComponent implements OnInit {
   }
 
   onDelete(name: string, id: number) {
-    if(confirm("Você tem certeza que deseja excluir o Produto"+ name +"?")) {            
-      this.ProductService.deleteProduct(id).then(response =>  this.ngOnInit() );       
+    if(confirm(" Are you sure you want to delete the developer "+ name +"?")) {            
+      this.DeveloperService.delete(id).then(response =>  this.ngOnInit() );       
     }
   } 
 
   onDetails(id: number){      
       
-    this.ProductService.getProduct(id).then((response) => {      
-       this.product = response;       
+    this.DeveloperService.getById(id).then((response) => {      
+       this.developer = response;
        this.bsModalRef = this.modalService.show(ModalComponent); 
        this.bsModalRef.content.title = "Details";                    
-       this.bsModalRef.content.product = this.product;                   
+       this.bsModalRef.content.developer = this.developer;                   
     });
   }
 }

@@ -1,19 +1,23 @@
 <div class="modal-header">
-    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <h5 class="modal-title pull-left">{{ title }}</h5>
     <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
         <span aria-hidden="true"></span>
       </button>
 </div>
 <div class="modal-body">
 
-    <ul *ngIf="product != null">
-        <h4> Id: {{ product.Id }} </h4>
-        <h4> Name: {{ product.Name }} </h4>
-        <h4> Description: {{ product.Descricao }} </h4>
-        <h4> Code: {{ product.Codigo }} </h4>
-        <h4> Price: {{ product.Preco }} </h4>
-        <h4> Email: {{ product.Email }} </h4>
+    <ul *ngIf="developer != null">
+        <h5> <strong> Id: </strong> {{ developer.Id }} </h5>
+        <h5> <strong> Name: </strong> {{ developer.Name }} </h5>
+        <h5> <strong> Skype: </strong> {{ developer.Skype }} </h5>
+        <h5> <strong> Phone: </strong> {{ developer.Phone }} </h5>
+        <h5> <strong> Linkedin: </strong> {{ developer.Linkedin }} </h5>
+        <h5> <strong> Email: </strong> {{ developer.Email }} </h5>
+        <h5> <strong> City: </strong> {{ developer.City }} </h5>
+        <h5> <strong> State: </strong> {{ developer.State }} </h5>
     </ul>
+
+
 
 </div>
 <div class="modal-footer">

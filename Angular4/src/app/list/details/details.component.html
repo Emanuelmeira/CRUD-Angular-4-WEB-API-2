@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 ">
+            <h3>{{title}}</h3>
+        </div>
+    </div>
+</div>
+
+<ul *ngIf="developer != null">
+    <h5> <strong> Id: </strong> {{ developer.Id }} </h5>
+    <h5> <strong> Name: </strong> {{ developer.Name }} </h5>
+    <h5> <strong> Skype: </strong> {{ developer.Skype }} </h5>
+    <h5> <strong> Phone: </strong> {{ developer.Phone }} </h5>
+    <h5> <strong> Linkedin: </strong> {{ developer.Linkedin }} </h5>
+    <h5> <strong> Email: </strong> {{ developer.Email }} </h5>
+    <h5> <strong> City: </strong> {{ developer.City }} </h5>
+    <h5> <strong> State: </strong> {{ developer.State }} </h5>
+</ul>
+
+<hr>
+<button class="btn btn-primary" [routerLink]="['/save', developer.Id]">
+  <i class="glyphicon glyphicon-pencil"></i>
+</button>
+
+<button class="btn btn-info" [routerLink]="['/list']">
+  <i class="glyphicon glyphicon-arrow-left"></i>
+</button>
