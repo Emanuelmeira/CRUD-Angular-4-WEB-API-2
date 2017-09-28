@@ -32,14 +32,80 @@ export class FormComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.id = params['id'];
     });  
+       
 
         this.form = this.formBuilder.group({
-          name: [null],
-          descricao: [null],
-          codigo: [null],
-          preco: [null],
-          email: [null]
-        });
+          // page 1
+          email: [null],
+          name: [null],          
+          skype: [null],
+          phone: [null],
+          linkedin: [null],
+          city: [null],
+          state: [null],
+          portfolio: [null], 
+
+          hourUntilFour: [null],
+          hourFourToSix: [null],
+          hourFourToEight: [null],
+          hourAboveEight: [null],
+          hoursOfWeekend: [null],
+
+          morningPeriod: [null],
+          afternoonPeriod: [null],
+          nightPeriod: [null],
+          dawnPeriod: [null],
+          businessPeriod: [null],
+
+          pretension: [null],
+
+          bank: [null],
+
+          //page 2
+          bankInf_name: [null],
+          bankInf_cpf:  [null],
+          bankInf_bank:  [null],
+          bankInf_agency:  [null],
+          bankInf_account:  [null],
+          bankInf_chain:  [null],
+          bankInf_savings:  [null],
+
+
+          //page 3
+          ionic: [null],
+          android: [null],
+          ios: [null],
+          html: [null],
+          css: [null],
+
+          bootstrap: [null],
+          query: [null],
+          angularJs: [null],
+          java: [null],
+          aspnet: [null],
+
+          c: [null],
+          cplusplus: [null],
+          cake: [null],
+          django: [null],
+          majento: [null],
+        
+          php: [null],
+          wordpress: [null],
+          phyton: [null],
+          ruby: [null],
+          sqlServer: [null],
+        
+          mySql: [null],
+          salesforce: [null],
+          photoshop: [null],
+          illustrator: [null],
+          seo: [null],
+        
+          otherKnowledge: [null],
+
+        });  
+
 
         this.title = this.id ? 'Edit Developer' : 'New Developer';
 

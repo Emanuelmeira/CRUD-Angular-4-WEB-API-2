@@ -35,7 +35,8 @@ namespace Domain.Entities
         public bool AfternoonPeriod { get; set; }
         public bool NightPeriod { get; set; }
         public bool DawnPeriod { get; set; }
-        
+        public bool BusinessPeriod { get; set; }        
+
         public int Pretension { get; set; }        
         public string Bank { get; set; }        
         public string Crud { get; set; }

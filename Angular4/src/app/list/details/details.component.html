@@ -6,16 +6,88 @@
     </div>
 </div>
 
-<ul *ngIf="developer != null">
-    <h5> <strong> Id: </strong> {{ developer.Id }} </h5>
-    <h5> <strong> Name: </strong> {{ developer.Name }} </h5>
-    <h5> <strong> Skype: </strong> {{ developer.Skype }} </h5>
-    <h5> <strong> Phone: </strong> {{ developer.Phone }} </h5>
-    <h5> <strong> Linkedin: </strong> {{ developer.Linkedin }} </h5>
-    <h5> <strong> Email: </strong> {{ developer.Email }} </h5>
-    <h5> <strong> City: </strong> {{ developer.City }} </h5>
-    <h5> <strong> State: </strong> {{ developer.State }} </h5>
-</ul>
+<div id="contact" class="row">
+
+    <div class="col-sm-3">
+        <h4>Contact</h4>
+        <h5> <strong> Name: </strong> {{ developer.Name }} </h5>
+        <h5> <strong> Skype: </strong> {{ developer.Skype }} </h5>
+        <h5> <strong> Phone: </strong> {{ developer.Phone }} </h5>
+        <h5> <strong> Linkedin: </strong> {{ developer.Linkedin }} </h5>
+        <h5> <strong> Email: </strong> {{ developer.Email }} </h5>
+        <h5> <strong> City: </strong> {{ developer.City }} </h5>
+        <h5> <strong> State: </strong> {{ developer.State }} </h5>
+    </div>
+
+    <div class="col-sm-3 ">
+        <h4>Bank Information</h4>
+        <h5> <strong> Name Bank: </strong> {{ developer.BankInformation.Name }} </h5>
+        <h5> <strong> CPF: </strong> {{ developer.BankInformation.CPF }} </h5>
+        <h5> <strong> Bank: </strong> {{ developer.BankInformation.Bank }} </h5>
+        <h5> <strong> Agency: </strong> {{ developer.BankInformation.Agency }} </h5>
+        <h5> <strong> Account: </strong> {{ developer.BankInformation.Account }} </h5>
+        <h5> <strong> Chain: </strong> {{ developer.BankInformation.Chain }} </h5>
+        <h5> <strong> Savings: </strong> {{ developer.BankInformation.Savings }} </h5>
+    </div>
+    <div class="col-sm-6 ">
+
+        <h4>perguntas??</h4>
+        <h5> {{ developer.HourUntilFour }} </h5>
+        <h4>perguntas??</h4>
+        <h5> {{ developer.HourFourToSix }} </h5>
+        <h4>ainda falta o resto ..</h4>
+    </div>
+</div>
+<hr>
+
+<div id="knowledge" class="row">
+
+    <div class="col-sm-3">
+        <h4>Knowledge</h4>
+        <ul>
+            <h5> <strong> Ionic: </strong> {{ developer.Knowledge.Ionic }} </h5>
+            <h5> <strong> Android: </strong> {{ developer.Knowledge.Android }} </h5>
+
+            <h5> <strong> Ios: </strong> {{ developer.Knowledge.Ios }} </h5>
+            <h5> <strong> Html: </strong> {{ developer.Knowledge.Html }} </h5>
+
+            <h5> <strong> Css: </strong> {{ developer.Knowledge.Css }} </h5>
+            <h5> <strong> Bootstrap: </strong> {{ developer.Knowledge.Bootstrap }} </h5>
+
+            <h5> <strong> Jquery: </strong> {{ developer.Knowledge.Jquery }} </h5>
+            <h5> <strong> AngularJs: </strong> {{ developer.Knowledge.AngularJs }} </h5>
+
+            <h5> <strong> Java: </strong> {{ developer.Knowledge.Java }} </h5>
+            <h5> <strong> Aspnet: </strong> {{ developer.Knowledge.Aspnet }} </h5>
+
+            <h5> <strong> C: </strong> {{ developer.Knowledge.C }} </h5>
+            <h5> <strong> Cplusplus: </strong> {{ developer.Knowledge.Cplusplus }} </h5>
+        </ul>
+    </div>
+
+    <div class="col-sm-3">
+        <h5> <strong> Majento: </strong> {{ developer.Knowledge.Majento }} </h5>
+        <h5> <strong> Php: </strong> {{ developer.Knowledge.Php }} </h5>
+
+
+        <h5> <strong> Wordpress: </strong> {{ developer.Knowledge.Wordpress }} </h5>
+        <h5> <strong> Phyton: </strong> {{ developer.Knowledge.Phyton }} </h5>
+
+        <h5> <strong> Ruby: </strong> {{ developer.Knowledge.Ruby }} </h5>
+        <h5> <strong> SqlServer: </strong> {{ developer.Knowledge.SqlServer }} </h5>
+        <h5> <strong> MySql: </strong> {{ developer.Knowledge.MySql }} </h5>
+        <h5> <strong> Salesforce: </strong> {{ developer.Knowledge.Salesforce }} </h5>
+        <h5> <strong> Photoshop: </strong> {{ developer.Knowledge.Photoshop }} </h5>
+        <h5> <strong> Illustrator: </strong> {{ developer.Knowledge.Illustrator }} </h5>
+        <h5> <strong> Seo: </strong> {{ developer.Knowledge.Seo }} </h5>
+        <h5> <strong> Other Knowledge: </strong> {{ developer.Knowledge.OtherKnowledge }} </h5>
+        <h5> <strong> Cake: </strong> {{ developer.Knowledge.Cake }} </h5>
+        <h5> <strong> Django: </strong> {{ developer.Knowledge.Django }} </h5>
+
+    </div>
+</div>
+
+
 
 <hr>
 <button class="btn btn-primary" [routerLink]="['/save', developer.Id]">
@@ -25,3 +97,4 @@
 <button class="btn btn-info" [routerLink]="['/list']">
   <i class="glyphicon glyphicon-arrow-left"></i>
 </button>
+<hr>

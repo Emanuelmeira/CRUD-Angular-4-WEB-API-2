@@ -55,36 +55,182 @@
 
         <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
             <tabset>
-                <tab heading="Occupation Area">
+                <tab heading="Occupation Area >>">
                     <!-- Table 1 -->
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Name</label>
+                        <label for="email" class="col-sm-2 control-label">Email*</label>
+                        <div class="col-sm-9">
+                            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Name*</label>
                         <div class="col-sm-9">
                             <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="descricao" class="col-sm-2 control-label">Description</label>
+                        <label for="skype" class="col-sm-2 control-label">Phone*</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="descricao" class="form-control" id="descricao" placeholder="Descrição">
+                            <input type="text" formControlName="skype" class="form-control" id="skype" placeholder="Skype">
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="phone" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin" class="col-sm-2 control-label">Linkedin</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="linkedin" class="form-control" id="linkedin" placeholder="Linkedin">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city" class="col-sm-2 control-label">City*</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="city" class="form-control" id="city" placeholder="City">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state" class="col-sm-2 control-label">State*</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="state" class="form-control" id="state" placeholder="State">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="portfolio" class="col-sm-2 control-label">Portfolio</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="portfolio" class="form-control" id="portfolio" placeholder="Portfolio">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>What is your willingness to work today? / Qual é sua disponibilidade para trabalhar hoje? *</h4>
+                        </div>
+                        <div class="col-sm-7 col-sm-offset-2">
+
+                            <div class="checkbox">
+                                <label><input formControlName="hourUntilFour" id="hourUntilFour" type="checkbox" value="">Up to 4 hours per day / Até 4 horas por dia</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input formControlName="hourFourToSix" id="hourFourToSix" type="checkbox" value="">4 to 6 hours per day / De 4 á 6 horas por dia</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input formControlName="hourFourToEight" id="hourFourToEight" type="checkbox" value="">6 to 8 hours per day /De 6 á 8 horas por dia</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="hourAboveEight" id="hourAboveEight" type="checkbox" value="">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="hoursOfWeekend" id="hoursOfWeekend" type="checkbox" value="">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>What's the best time to work for you? / Pra você qual é o melhor horário para trabalhar? *</h4>
+                        </div>
+                        <div class="col-sm-7 col-sm-offset-2">
+
+                            <div class="checkbox">
+                                <label><input formControlName="morningPeriod" id="morningPeriod" type="checkbox" value="">Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input formControlName="afternoonPeriod" id="afternoonPeriod" type="checkbox" value="">Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input formControlName="nightPeriod" id="nightPeriod" type="checkbox" value="">Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="dawnPeriod" id="dawnPeriod" type="checkbox" value="">Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="businessPeriod" id="businessPeriod" type="checkbox" value="">Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pretension" class="col-sm-2 control-label">Pretension*</label>
+                        <div class="col-sm-9">
+                            <input type="number" formControlName="pretension" class="form-control" id="pretension" placeholder="Pretension">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bank" class="col-sm-2 control-label">Bank Information</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="bank" class="form-control" id="bank" placeholder="Bank Information">
+                        </div>
+                    </div>
                 </tab>
-                <tab heading="Bank Information">
+                <tab heading="Bank Information  >>">
                     <!-- Table 2 -->
+
                     <div class="form-group">
-                        <label for="codigo" class="col-sm-2 control-label">Code</label>
+                        <label for="bankInf_name" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="codigo" class="form-control" id="codigo" placeholder="Codigo">
+                            <input type="text" formControlName="bankInf_name" class="form-control" id="bankInf_name" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="preco" class="col-sm-2 control-label">Price</label>
+                        <label for="bankInf_cpf" class="col-sm-2 control-label">CPF</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="preco" class="form-control" id="preco" placeholder="Preço">
+                            <input type="text" formControlName="bankInf_cpf" class="form-control" id="bankInf_cpf" placeholder="CPF">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankInf_bank" class="col-sm-2 control-label">Name Bank</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="bankInf_bank" class="form-control" id="bankInf_bank" placeholder="Bank">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankInf_agency" class="col-sm-2 control-label">Agency</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="bankInf_agency" class="form-control" id="bankInf_agency" placeholder="Agency">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Account Type</h4>
+                        </div>
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <div class="checkbox">
+                                <label><input formControlName="bankInf_chain" id="bankInf_chain" type="checkbox" value="">Chain</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="bankInf_savings" id="bankInf_savings" type="checkbox" value="">Savings</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bankInf_account" class="col-sm-2 control-label">Account Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="bankInf_account" class="form-control" id="bankInf_account" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -93,11 +239,93 @@
                 <tab heading="Knowledge">
                     <!-- Table 3 -->
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Ionic*</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Android*</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Ios*</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="ios" id="ios" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="ios" id="ios" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="ios" id="ios" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="ios" id="ios" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="ios" id="ios" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Html</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="html" id="html" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="html" id="html" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="html" id="html" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="html" id="html" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="html" id="html" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Css</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="css" id="css" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="css" id="css" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="css" id="css" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="css" id="css" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="css" id="css" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-2">
@@ -112,10 +340,7 @@
 
             </tabset>
 
-
         </form>
-
-
 
 
     </div>

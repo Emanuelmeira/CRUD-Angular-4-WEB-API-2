@@ -22,12 +22,17 @@ export class Developer {
     HourFourToEight: boolean
     HourAboveEight: boolean
     HoursOfWeekend: boolean
+
     MorningPeriod: boolean
     AfternoonPeriod: boolean
     NightPeriod: boolean
-    DawnPeriod: boolean
-    
+    DawnPeriod: boolean    
+    BusinessPeriod: boolean
+
     Pretension: number    
+
+    Bank: string
+
     Crud: string
     
     Knowledge: Knowledge
