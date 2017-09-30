@@ -41,8 +41,8 @@ namespace Domain.Entities
         public string Bank { get; set; }        
         public string Crud { get; set; }
 
-        public int BankInformationId { get; set; }
-        public BankInformation BankInformation { get; set; }
+        public int BankInfId { get; set; }
+        public BankInf BankInf { get; set; }
 
         public int KnowledgeId { get; set; }
         public Knowledge Knowledge { get; set; }

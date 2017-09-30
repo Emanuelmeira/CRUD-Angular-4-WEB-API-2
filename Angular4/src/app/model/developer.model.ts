@@ -1,9 +1,11 @@
 import { Knowledge } from "app/model/knowlodge.model";
-import { BankInformation } from "app/model/bankInformation.model";
+import { BankInf } from "app/model/bankInf.model";
 
 export class Developer {
 
-    constructor() {        
+    constructor() { 
+        this.BankInf = new BankInf();
+        this.Knowledge = new Knowledge();
     }
 
     Id: number
@@ -17,17 +19,17 @@ export class Developer {
     State: string
     Portfolio: string
     
-    HourUntilFour: boolean
+    HourUntilFour: boolean 
     HourFourToSix: boolean
     HourFourToEight: boolean
     HourAboveEight: boolean
-    HoursOfWeekend: boolean
+    HoursOfWeekend: boolean 
 
     MorningPeriod: boolean
     AfternoonPeriod: boolean
     NightPeriod: boolean
     DawnPeriod: boolean    
-    BusinessPeriod: boolean
+    BusinessPeriod: boolean 
 
     Pretension: number    
 
@@ -36,5 +38,5 @@ export class Developer {
     Crud: string
     
     Knowledge: Knowledge
-    BankInformation: BankInformation
+    BankInf: BankInf
 }

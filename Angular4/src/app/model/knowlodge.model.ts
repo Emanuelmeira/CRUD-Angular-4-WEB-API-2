@@ -3,33 +3,33 @@ export class Knowledge {
     constructor() {        
     }
 
-    Id: boolean
+    Id: number
     
-       Ionic: boolean
-       Android: boolean
-       Ios: boolean
-       Html: boolean
-       Css: boolean
-       Bootstrap: boolean
-       Jquery: boolean
-       AngularJs: boolean
-       Java: boolean
-       Aspnet: boolean
-       C: boolean
-       Cplusplus: boolean
-       Cake: boolean
-       Django: boolean
-       Majento: boolean
-       Php: boolean
-       Wordpress: boolean
-       Phyton: boolean
-       Ruby: boolean
-       SqlServer: boolean
-       MySql: boolean
-       Salesforce: boolean
-       Photoshop: boolean
-       Illustrator: boolean
-       Seo: boolean
+       Ionic: number
+       Android: number
+       Ios: number
+       Html: number
+       Css: number
+       Bootstrap: number
+       Jquery: number
+       AngularJs: number
+       Java: number
+       Aspnet: number
+       C: number
+       Cplusplus: number
+       Cake: number
+       Django: number
+       Majento: number
+       Php: number
+       Wordpress: number
+       Phyton: number
+       Ruby: number
+       SqlServer: number
+       MySql: number
+       Salesforce: number
+       Photoshop: number
+       Illustrator: number
+       Seo: number
     
        OtherKnowledge: string
 }

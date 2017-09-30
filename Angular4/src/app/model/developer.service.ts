@@ -24,12 +24,12 @@ export class DeveloperService {
    }
 
    // POST product
-    add(developer: Developer): Promise<Product> {       
+    add(developer: Developer): Promise<Developer> {       
         
         return this.http.post(this.url, JSON.stringify(developer), this.options  )
                .toPromise()
                .then(response => <Product>response.json())
-               .catch(this.handleError)
+               .catch(this.handleError) 
     }
  
     // PUT product

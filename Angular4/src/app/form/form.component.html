@@ -65,14 +65,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Name*</label>
+                        <label for="name" class="col-sm-2 control-label">name*</label>
                         <div class="col-sm-9">
                             <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="skype" class="col-sm-2 control-label">Phone*</label>
+                        <label for="skype" class="col-sm-2 control-label">skype*</label>
                         <div class="col-sm-9">
                             <input type="text" formControlName="skype" class="form-control" id="skype" placeholder="Skype">
                         </div>
@@ -121,21 +121,21 @@
                         <div class="col-sm-7 col-sm-offset-2">
 
                             <div class="checkbox">
-                                <label><input formControlName="hourUntilFour" id="hourUntilFour" type="checkbox" value="">Up to 4 hours per day / Até 4 horas por dia</label>
+                                <label><input formControlName="hourUntilFour" id="hourUntilFour" type="checkbox" >Up to 4 hours per day / Até 4 horas por dia</label>
                             </div>
                             <div class="checkbox">
-                                <label><input formControlName="hourFourToSix" id="hourFourToSix" type="checkbox" value="">4 to 6 hours per day / De 4 á 6 horas por dia</label>
+                                <label><input formControlName="hourFourToSix" id="hourFourToSix" type="checkbox" >4 to 6 hours per day / De 4 á 6 horas por dia</label>
                             </div>
                             <div class="checkbox">
-                                <label><input formControlName="hourFourToEight" id="hourFourToEight" type="checkbox" value="">6 to 8 hours per day /De 6 á 8 horas por dia</label>
-                            </div>
-
-                            <div class="checkbox">
-                                <label><input formControlName="hourAboveEight" id="hourAboveEight" type="checkbox" value="">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+                                <label><input formControlName="hourFourToEight" id="hourFourToEight" type="checkbox" >6 to 8 hours per day /De 6 á 8 horas por dia</label>
                             </div>
 
                             <div class="checkbox">
-                                <label><input formControlName="hoursOfWeekend" id="hoursOfWeekend" type="checkbox" value="">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+                                <label><input formControlName="hourAboveEight" id="hourAboveEight" type="checkbox" >Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="hoursOfWeekend" id="hoursOfWeekend" type="checkbox" >Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
                             </div>
                         </div>
                     </div>
@@ -148,21 +148,21 @@
                         <div class="col-sm-7 col-sm-offset-2">
 
                             <div class="checkbox">
-                                <label><input formControlName="morningPeriod" id="morningPeriod" type="checkbox" value="">Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)</label>
+                                <label><input formControlName="morningPeriod" id="morningPeriod" type="checkbox">Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)</label>
                             </div>
                             <div class="checkbox">
-                                <label><input formControlName="afternoonPeriod" id="afternoonPeriod" type="checkbox" value="">Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)</label>
+                                <label><input formControlName="afternoonPeriod" id="afternoonPeriod" type="checkbox" >Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)</label>
                             </div>
                             <div class="checkbox">
-                                <label><input formControlName="nightPeriod" id="nightPeriod" type="checkbox" value="">Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)</label>
-                            </div>
-
-                            <div class="checkbox">
-                                <label><input formControlName="dawnPeriod" id="dawnPeriod" type="checkbox" value="">Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)</label>
+                                <label><input formControlName="nightPeriod" id="nightPeriod" type="checkbox" >Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)</label>
                             </div>
 
                             <div class="checkbox">
-                                <label><input formControlName="businessPeriod" id="businessPeriod" type="checkbox" value="">Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)</label>
+                                <label><input formControlName="dawnPeriod" id="dawnPeriod" type="checkbox" >Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label><input formControlName="businessPeriod" id="businessPeriod" type="checkbox" >Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)</label>
                             </div>
                         </div>
                     </div>
@@ -320,12 +320,357 @@
                     </div>
 
 
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Bootstrap</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="bootstrap" id="bootstrap" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="bootstrap" id="bootstrap" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="bootstrap" id="bootstrap" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="bootstrap" id="bootstrap" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="bootstrap" id="bootstrap" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Jquery</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="jquery" id="jquery" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="jquery" id="jquery" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="jquery" id="jquery" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="jquery" id="jquery" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="jquery" id="jquery" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>angularJs</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="angularJs" id="angularJs" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="angularJs" id="angularJs" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="angularJs" id="angularJs" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="angularJs" id="angularJs" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="angularJs" id="angularJs" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Java</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="java" id="java" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="java" id="java" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="java" id="java" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="java" id="java" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="java" id="java" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>aspnet</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="aspnet" id="aspnet" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="aspnet" id="aspnet" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="aspnet" id="aspnet" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="aspnet" id="aspnet" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="aspnet" id="aspnet" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>c</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="c" id="c" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="c" id="c" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="c" id="c" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="c" id="c" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="c" id="c" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Cplusplus</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="cplusplus" id="cplusplus" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="cplusplus" id="cplusplus" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="cplusplus" id="cplusplus" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="cplusplus" id="cplusplus" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="cplusplus" id="cplusplus" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>cake</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="cake" id="cake" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="cake" id="cake" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="cake" id="cake" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="cake" id="cake" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="cake" id="cake" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>django</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="django" id="django" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="django" id="django" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="django" id="django" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="django" id="django" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="django" id="django" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>majento</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="majento" id="majento" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="majento" id="majento" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="majento" id="majento" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="majento" id="majento" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="majento" id="majento" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>php</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="php" id="php" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="php" id="php" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="php" id="php" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="php" id="php" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="php" id="php" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>wordpress</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="wordpress" id="wordpress" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="wordpress" id="wordpress" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="wordpress" id="wordpress" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="wordpress" id="wordpress" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="wordpress" id="wordpress" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
 
 
 
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>phyton</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="phyton" id="phyton" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="phyton" id="phyton" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="phyton" id="phyton" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="phyton" id="phyton" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="phyton" id="phyton" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>ruby</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="ruby" id="ruby" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="ruby" id="ruby" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="ruby" id="ruby" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="ruby" id="ruby" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="ruby" id="ruby" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
 
 
 
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>sqlServer</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="sqlServer" id="sqlServer" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="sqlServer" id="sqlServer" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="sqlServer" id="sqlServer" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="sqlServer" id="sqlServer" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="sqlServer" id="sqlServer" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>MySql</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="mySql" id="mySql" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="mySql" id="mySql" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="mySql" id="mySql" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="mySql" id="myql" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="mySql" id="mySql" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>salesforce</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="salesforce" id="salesforce" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="salesforce" id="salesforce" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="salesforce" id="salesforce" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="salesforce" id="salesforce" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="salesforce" id="salesforce" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>photoshop</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="photoshop" id="photoshop" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="photoshop" id="photoshop" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="photoshop" id="photoshop" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="photoshop" id="photoshop" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="photoshop" id="photoshop" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>illustrator</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="illustrator" id="illustrator" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="illustrator" id="illustrator" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="illustrator" id="illustrator" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="illustrator" id="illustrator" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="illustrator" id="illustrator" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>seo</h4>
+                        </div>
+
+                        <div class="col-sm-7 col-sm-offset-2">
+                            <label class="radio-inline">I don't know </label>
+                            <label class="radio-inline"><input formControlName="seo" id="seo" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="seo" id="seo" type="radio" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="seo" id="seo" type="radio" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="seo" id="seo" type="radio" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="seo" id="seo" type="radio" value="5">5</label>
+                            <label class="radio-inline"> Senior</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="otherKnowledge" class="col-sm-2 control-label">Other Knowledge</label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="otherKnowledge" class="form-control" id="otherKnowledge" placeholder="Other Knowledge">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="crud" class="col-sm-2 control-label">Link Crud </label>
+                        <div class="col-sm-9">
+                            <input type="text" formControlName="crud" class="form-control" id="crud" placeholder="Crud">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-2">

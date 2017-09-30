@@ -1,4 +1,4 @@
-export class BankInformation {
+export class BankInf {
 
     constructor() {        
     }

@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\EFContext.cs" />
-    <Compile Include="Entities\BankInformation.cs" />
+    <Compile Include="Entities\BankInf.cs" />
     <Compile Include="Entities\Developer.cs" />
     <Compile Include="Entities\Knowledge.cs" />
     <Compile Include="Exceptions\RepositoryExeption.cs" />

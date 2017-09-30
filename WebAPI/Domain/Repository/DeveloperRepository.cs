@@ -27,7 +27,7 @@ namespace Domain.Repository
             {
                IQueryable<Developer> query = Context.Developers;
 
-               var item =  query.Include(b => b.BankInformation)
+               var item =  query.Include(b => b.BankInf)
                                 .Include(k => k.Knowledge)
                                 .ToList();                
 
@@ -116,7 +116,7 @@ namespace Domain.Repository
                 IQueryable<Developer> query = Context.Developers;
 
                 var Developer = query.Where(x => x.Id == id)
-                                     .Include(b => b.BankInformation)
+                                     .Include(b => b.BankInf)
                                      .Include(k => k.Knowledge)
                                      .FirstOrDefault();
                 return Developer;

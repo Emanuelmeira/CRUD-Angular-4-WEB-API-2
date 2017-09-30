@@ -15,7 +15,7 @@ namespace Domain.Context
         
         public IDbSet<Developer> Developers { get; set; }
         public IDbSet<Knowledge> Knowledge { get; set; }
-        public IDbSet<BankInformation> BankInformation { get; set; }
+        public IDbSet<BankInf> BankInformation { get; set; }
         
 
         //Factory para contexto
