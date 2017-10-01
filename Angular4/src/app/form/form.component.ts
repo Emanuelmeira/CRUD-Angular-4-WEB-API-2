@@ -193,15 +193,56 @@ export class FormComponent implements OnInit {
 
   onEdit(id: number){
 
-    /*  this.DeveloperService.getById(id).then(response => {
+      this.DeveloperService.getById(id).then(response => {
         this.developer = response;
         
-        this.form.get('name').setValue(this.developer.Name);
-        this.form.get('descricao').setValue(this.developer.Descricao); 
-        this.form.get('codigo').setValue(this.developer.Codigo); 
-        this.form.get('preco').setValue(this.developer.Preco); 
+        console.log( this.developer);
+
         this.form.get('email').setValue(this.developer.Email); 
-      }); */
+        this.form.get('name').setValue(this.developer.Name);		
+        this.form.get('skype').setValue(this.developer.Skype); 
+        this.form.get('phone').setValue(this.developer.Phone); 
+        this.form.get('linkedin').setValue(this.developer.Linkedin);
+        this.form.get('city').setValue(this.developer.City);
+        this.form.get('state').setValue(this.developer.State);
+        this.form.get('portfolio').setValue(this.developer.Portfolio);
+        
+        this.form.get('hourUntilFour').setValue(this.developer.HourUntilFour);
+        this.form.get('hourFourToSix').setValue(this.developer.HourFourToSix);
+        this.form.get('hourFourToEight').setValue(this.developer.HourFourToEight);
+        this.form.get('hourAboveEight').setValue(this.developer.HourAboveEight);
+        this.form.get('hoursOfWeekend').setValue(this.developer.HoursOfWeekend);
+        
+        this.form.get('morningPeriod').setValue(this.developer.MorningPeriod);
+        this.form.get('afternoonPeriod').setValue(this.developer.AfternoonPeriod);
+        this.form.get('nightPeriod').setValue(this.developer.NightPeriod);
+        this.form.get('dawnPeriod').setValue(this.developer.DawnPeriod);
+        this.form.get('businessPeriod').setValue(this.developer.BusinessPeriod);
+        
+        
+        this.form.get('pretension').setValue(this.developer.Pretension);
+        this.form.get('bank').setValue(this.developer.Bank);
+        this.form.get('crud').setValue(this.developer.Crud);
+        
+        
+        this.form.get('bankInf_name').setValue(this.developer.BankInf.Name);
+        this.form.get('bankInf_cpf').setValue(this.developer.BankInf.CPF);
+        this.form.get('bankInf_bank').setValue(this.developer.BankInf.Bank);
+        this.form.get('bankInf_agency').setValue(this.developer.BankInf.Agency);
+        this.form.get('bankInf_account').setValue(this.developer.BankInf.Account);
+        this.form.get('bankInf_chain').setValue(this.developer.BankInf.Chain);
+        this.form.get('bankInf_savings').setValue(this.developer.BankInf.Savings);
+        
+        
+        //this.form.get('ionic').setValue(true, this.developer.Knowledge.Ionic);
+
+        
+
+
+
+
+
+      }); 
   }
 
   reset(){

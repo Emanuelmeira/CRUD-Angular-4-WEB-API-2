@@ -245,11 +245,11 @@
 
                         <div class="col-sm-7 col-sm-offset-2">
                             <label class="radio-inline">I don't know </label>
-                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="1">1</label>
-                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="2">2</label>
-                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="3">3</label>
-                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="4">4</label>
-                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" value="5">5</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" [checked]="developer.Knowledge.Ionic==1" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" [checked]="developer.Knowledge.Ionic==2" value="2">2</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" [checked]="developer.Knowledge.Ionic==3" value="3">3</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" [checked]="developer.Knowledge.Ionic==4" value="4">4</label>
+                            <label class="radio-inline"><input formControlName="ionic" id="inoic" type="radio" [checked]="developer.Knowledge.Ionic==5" value="5">5</label>
                             <label class="radio-inline"> Senior</label>
                         </div>
                     </div>
@@ -261,7 +261,7 @@
 
                         <div class="col-sm-7 col-sm-offset-2">
                             <label class="radio-inline">I don't know </label>
-                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="1">1</label>
+                            <label class="radio-inline"><input formControlName="android" id="android" type="radio" [checked]="developer.Knowledge.Android==1" value="1">1</label>
                             <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="2">2</label>
                             <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="3">3</label>
                             <label class="radio-inline"><input formControlName="android" id="android" type="radio" value="4">4</label>
