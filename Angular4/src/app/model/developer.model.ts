@@ -19,17 +19,17 @@ export class Developer {
     State: string
     Portfolio: string
     
-    HourUntilFour: boolean 
-    HourFourToSix: boolean
-    HourFourToEight: boolean
-    HourAboveEight: boolean
-    HoursOfWeekend: boolean 
+    HourUntilFour: boolean;
+    HourFourToSix: boolean;
+    HourFourToEight: boolean;
+    HourAboveEight: boolean;
+    HoursOfWeekend: boolean;
 
-    MorningPeriod: boolean
-    AfternoonPeriod: boolean
-    NightPeriod: boolean
-    DawnPeriod: boolean    
-    BusinessPeriod: boolean 
+    MorningPeriod: boolean;
+    AfternoonPeriod: boolean;
+    NightPeriod: boolean;
+    DawnPeriod: boolean;
+    BusinessPeriod: boolean;
 
     Pretension: number    
 

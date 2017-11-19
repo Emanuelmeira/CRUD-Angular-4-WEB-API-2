@@ -1,20 +1,22 @@
 ﻿using Domain.Entities;
-using Domain.Exceptions;
-using Domain.Repository;
-using System;
+using Projeto.Infra.Exceptions;
+using Projeto.Infra.Repository;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using WebApiAngular.Interfaces.Services;
 
 namespace WebApiAngular.Services
 {
     public class DeveloperService : IService<Developer>
     {
+        //INjeção de dependencia
         private DeveloperRepository DeveloperRepository;
+        private BankInformationRepository BankInformationRepository;
+        private KnowledgeRepository KnowledgeRepository;
 
         public DeveloperService()
         {
+            BankInformationRepository = new BankInformationRepository();
+            KnowledgeRepository = new KnowledgeRepository();
             DeveloperRepository = new DeveloperRepository();
         }
 
@@ -49,6 +51,8 @@ namespace WebApiAngular.Services
         {
             try
             {
+                BankInformationRepository.Update(Developer.BankInf);
+                KnowledgeRepository.Update(Developer.Knowledge);
                 DeveloperRepository.Update(Developer);                
             }
             catch (RepositoryException ex)

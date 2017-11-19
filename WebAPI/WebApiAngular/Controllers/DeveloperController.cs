@@ -1,17 +1,11 @@
 ﻿using Domain.Entities;
-using Domain.Exceptions;
-using WebApiAngular.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
+using Projeto.Infra.Exceptions;
 using System.Web.Http;
 using System.Web.Http.Description;
+using WebApiAngular.Services;
 
 namespace WebApiAngular.Controllers
-{    
+{
     public class DeveloperController : ApiController
     {
         public DeveloperService DeveloperService;

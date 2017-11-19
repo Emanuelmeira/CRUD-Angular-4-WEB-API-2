@@ -35,39 +35,39 @@ export class FormComponent implements OnInit {
 
         this.form = this.formBuilder.group({
           // page 1
-          email: [null],
-          name: [null],          
-          skype: [null],
-          phone: [null],
-          linkedin: [null],
-          city: [null],
-          state: [null],
-          portfolio: [null], 
+          email: ["emanuelmeira@outlook.com"],
+          name: ["emanuel"],          
+          skype: ["Skype"],
+          phone: ["557199325148"],
+          linkedin: ["https://br.linkedin.com/in/emanuelmeira"],
+          city: ["Salvaodr"],
+          state: ["Bahia"],
+          portfolio: ["Github.com"], 
 
-          hourUntilFour: [null],
-          hourFourToSix: [null],
-          hourFourToEight: [null],
-          hourAboveEight: [null],
-          hoursOfWeekend: [null], 
+          hourUntilFour: [false],
+          hourFourToSix: [false],
+          hourFourToEight: [false],
+          hourAboveEight: [false],
+          hoursOfWeekend: [false], 
 
-          morningPeriod: [null],
-          afternoonPeriod: [null],
-          nightPeriod: [null],
-          dawnPeriod: [null],
-          businessPeriod: [null],
+          morningPeriod: [false],
+          afternoonPeriod: [false],
+          nightPeriod: [false],
+          dawnPeriod: [false],
+          businessPeriod: [false],
 
-          pretension: [null],
+          pretension: [20],
 
-          bank: [null],
+          bank: ["n sei oq botar aqui"],
 
           //page 2
-          bankInf_name: [null],
-          bankInf_cpf:  [null],
-          bankInf_bank:  [null],
-          bankInf_agency:  [null],
-          bankInf_account:  [null],
-          bankInf_chain:  [null],
-          bankInf_savings:  [null],
+          bankInf_name: ["Emanuel"],
+          bankInf_cpf:  ["12345678901"],
+          bankInf_bank:  ["Emanuel meira"],
+          bankInf_agency:  ["0154"],
+          bankInf_account:  ["21544444"],
+          bankInf_chain:  [false],
+          bankInf_savings:  [false],
 
           //page 3
           ionic: [null],
@@ -100,9 +100,9 @@ export class FormComponent implements OnInit {
           illustrator: [null],
           seo: [null],
         
-          otherKnowledge: [null],
+          otherKnowledge: ["Selenium"],
  
-          crud: [null]
+          crud: ["www.crud.com"]
 
         });  
 
@@ -124,7 +124,10 @@ export class FormComponent implements OnInit {
 	  this.developer.State = this.form.controls['state'].value;
 	  this.developer.Portfolio = this.form.controls['portfolio'].value;
 	
-	  this.developer.HourUntilFour = this.form.controls['hourUntilFour'].value;
+    console.log(this.developer.HourUntilFour);
+    this.developer.HourUntilFour = this.form.controls['hourUntilFour'].value;
+
+
 	  this.developer.HourFourToSix = this.form.controls['hourFourToSix'].value;
 	  this.developer.HourFourToEight = this.form.controls['hourFourToEight'].value;
 	  this.developer.HourAboveEight = this.form.controls['hourAboveEight'].value;
@@ -156,8 +159,8 @@ export class FormComponent implements OnInit {
   	this.developer.Knowledge.Android = this.form.controls['android'].value;
     this.developer.Knowledge.Ios = this.form.controls['ios'].value;
     this.developer.Knowledge.Html = this.form.controls['html'].value;
-  	this.developer.Knowledge.Css = this.form.controls['css'].value;
-  	this.developer.Knowledge.Bootstrap = this.form.controls['bootstrap'].value;
+    this.developer.Knowledge.Css = this.form.controls['css'].value;
+    this.developer.Knowledge.Bootstrap = this.form.controls['bootstrap'].value;
 	  this.developer.Knowledge.Jquery = this.form.controls['jquery'].value;
 	  this.developer.Knowledge.AngularJs = this.form.controls['angularJs'].value;
 	
@@ -185,7 +188,7 @@ export class FormComponent implements OnInit {
 
     if(this.developer.Id){ 
       this.DeveloperService.update(this.developer).then(() => this.router.navigate(['/list']) );
-    }else{
+    }else{      
       this.DeveloperService.add(this.developer).then(() => this.router.navigate(['/list']) );
     }
 
@@ -222,9 +225,8 @@ export class FormComponent implements OnInit {
         
         this.form.get('pretension').setValue(this.developer.Pretension);
         this.form.get('bank').setValue(this.developer.Bank);
-        this.form.get('crud').setValue(this.developer.Crud);
         
-        
+        //bank
         this.form.get('bankInf_name').setValue(this.developer.BankInf.Name);
         this.form.get('bankInf_cpf').setValue(this.developer.BankInf.CPF);
         this.form.get('bankInf_bank').setValue(this.developer.BankInf.Bank);
@@ -234,12 +236,40 @@ export class FormComponent implements OnInit {
         this.form.get('bankInf_savings').setValue(this.developer.BankInf.Savings);
         
         
-        //this.form.get('ionic').setValue(true, this.developer.Knowledge.Ionic);
+        //Knowlodge
+        this.form.get('ionic').setValue(this.developer.Knowledge.Ionic);
+        this.form.get('android').setValue(this.developer.Knowledge.Android);
+        this.form.get('ios').setValue(this.developer.Knowledge.Ios);
+        this.form.get('html').setValue(this.developer.Knowledge.Html);
+        this.form.get('css').setValue(this.developer.Knowledge.Css);
+        this.form.get('bootstrap').setValue(this.developer.Knowledge.Bootstrap);
+        this.form.get('jquery').setValue(this.developer.Knowledge.Jquery);
+        this.form.get('angularJs').setValue(this.developer.Knowledge.AngularJs);
+       
+       
+        this.form.get('java').setValue(this.developer.Knowledge.Java);
+        this.form.get('aspnet').setValue(this.developer.Knowledge.Aspnet);
+        this.form.get('c').setValue(this.developer.Knowledge.C);
+        this.form.get('cplusplus').setValue(this.developer.Knowledge.Cplusplus);
+        this.form.get('cake').setValue(this.developer.Knowledge.Cake);
+        this.form.get('django').setValue(this.developer.Knowledge.Django);
+        this.form.get('majento').setValue(this.developer.Knowledge.Majento);
+        this.form.get('php').setValue(this.developer.Knowledge.Php);
+        this.form.get('wordpress').setValue(this.developer.Knowledge.Wordpress);    
+        this.form.get('phyton').setValue(this.developer.Knowledge.Phyton);
 
+        this.form.get('ruby').setValue(this.developer.Knowledge.Ruby);
+        this.form.get('sqlServer').setValue(this.developer.Knowledge.SqlServer);
+        this.form.get('mySql').setValue(this.developer.Knowledge.MySql);
+        this.form.get('salesforce').setValue(this.developer.Knowledge.Salesforce);
+        this.form.get('photoshop').setValue(this.developer.Knowledge.Photoshop);
+        this.form.get('illustrator').setValue(this.developer.Knowledge.Illustrator);
+        this.form.get('seo').setValue(this.developer.Knowledge.Seo);
+        this.form.get('otherKnowledge').setValue(this.developer.Knowledge.OtherKnowledge);
+                
         
-
-
-
+        this.form.get('crud').setValue(this.developer.Crud);
+      
 
 
       }); 

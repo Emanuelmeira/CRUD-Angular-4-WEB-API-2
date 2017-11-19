@@ -12,7 +12,7 @@ namespace WebApiAngular
         {
             // Web API configuration and services
 
-            //Ativando CORS
+            //CORS
             var politicas = new EnableCorsAttribute(
                origins: "*",
                methods: "*",

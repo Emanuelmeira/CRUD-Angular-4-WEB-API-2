@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class Developer
     {       
@@ -41,11 +35,11 @@ namespace Domain.Entities
         public string Bank { get; set; }        
         public string Crud { get; set; }
 
-        public int BankInfId { get; set; }
-        public BankInf BankInf { get; set; }
+        public int BankInformationId { get; set; }
+        public virtual BankInformation BankInf { get; set; }
 
         public int KnowledgeId { get; set; }
-        public Knowledge Knowledge { get; set; }
+        public virtual Knowledge Knowledge { get; set; }
         
     }
 }

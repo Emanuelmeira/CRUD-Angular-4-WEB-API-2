@@ -5,15 +5,15 @@ export class Knowledge {
 
     Id: number
     
-       Ionic: number
-       Android: number
-       Ios: number
+       Ionic: number 
+       Android: number 
+       Ios: number 
        Html: number
        Css: number
        Bootstrap: number
        Jquery: number
        AngularJs: number
-       Java: number
+       Java: number 
        Aspnet: number
        C: number
        Cplusplus: number

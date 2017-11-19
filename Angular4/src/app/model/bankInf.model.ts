@@ -3,7 +3,7 @@ export class BankInf {
     constructor() {        
     }
 
-    Id: boolean
+    Id: number
     
     Name: string
     CPF: string
@@ -11,6 +11,6 @@ export class BankInf {
     Agency: string
     Account: string
 
-    Chain: false
-    Savings: false
+    Chain: false;
+    Savings: false;
 }
