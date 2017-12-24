@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Projeto.Infra.Repository
 {
-    public class BankInformationRepository : IRepository<BankInformation>
+    public class BankInformationRepository : IBankInformationRepository
     {                
         private EFContext Context;
 
@@ -17,7 +17,7 @@ namespace Projeto.Infra.Repository
             Context = EFContext.ContextFactory();
         }
         
-        //Put BankInformation
+        //UPDATE BankInformation
         public void Update(BankInformation BankInformation)
         {
             try

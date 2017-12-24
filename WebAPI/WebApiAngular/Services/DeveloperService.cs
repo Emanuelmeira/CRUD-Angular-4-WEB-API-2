@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Projeto.Infra.Exceptions;
+using Projeto.Infra.Interfaces;
 using Projeto.Infra.Repository;
 using System.Collections.Generic;
 using WebApiAngular.Interfaces.Services;
@@ -7,11 +8,10 @@ using WebApiAngular.Interfaces.Services;
 namespace WebApiAngular.Services
 {
     public class DeveloperService : IService<Developer>
-    {
-        //INjeção de dependencia
-        private DeveloperRepository DeveloperRepository;
-        private BankInformationRepository BankInformationRepository;
-        private KnowledgeRepository KnowledgeRepository;
+    {        
+        private IDeveloperRepository DeveloperRepository;
+        private IBankInformationRepository BankInformationRepository;
+        private IKnowledgeRepository KnowledgeRepository;
 
         public DeveloperService()
         {

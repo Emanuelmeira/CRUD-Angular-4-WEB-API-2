@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Projeto.Infra.Repository
 {
-    public class KnowledgeRepository : IRepository<Knowledge>
+    public class KnowledgeRepository : IKnowledgeRepository
     {                
         private EFContext Context;
 
@@ -17,7 +17,7 @@ namespace Projeto.Infra.Repository
             Context = EFContext.ContextFactory();
         }
         
-        //Put Knowledge
+        //UPDATE Knowledge
         public void Update(Knowledge Knowledge)
         {
             try

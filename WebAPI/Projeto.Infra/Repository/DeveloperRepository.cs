@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Projeto.Infra.Repository
 {
-    public class DeveloperRepository : IRepository<Developer>
+    public class DeveloperRepository : IDeveloperRepository
     {                
         private EFContext Context;
 
@@ -18,7 +18,7 @@ namespace Projeto.Infra.Repository
             Context = EFContext.ContextFactory();
         }
 
-        //Get all Developers
+        //GET ALL Developers
         public List<Developer> GetAll()
         {
             try
@@ -27,7 +27,7 @@ namespace Projeto.Infra.Repository
 
                var item =  query.Include(b => b.BankInf)
                                 .Include(k => k.Knowledge)
-                                .ToList();                
+                                .ToList();               
 
                return item;
 
@@ -38,7 +38,7 @@ namespace Projeto.Infra.Repository
             }
         }
 
-        //Post Developer
+        //SAVE Developer
         public void Save(Developer Developer)
         {
             try
@@ -52,7 +52,7 @@ namespace Projeto.Infra.Repository
             }  
         }
 
-        //Put Developer
+        //UPDATE Developer
         public void Update(Developer Developer)
         {
 
