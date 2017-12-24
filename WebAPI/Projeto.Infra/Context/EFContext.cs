@@ -1,15 +1,15 @@
-﻿using Domain.Entities;
+﻿using Easy.Domain.Entities;
 using Projeto.Infra.Mappings;
-using Projeto.Infra.Mappings.Seed;
+using Easy.Infra.Mappings.Seed;
 using System.Data.Entity;
 
-namespace Projeto.Infra.Context
+namespace Easy.Infra.Context
 {
     public class EFContext : DbContext
     {        
         public EFContext() : base("CRUD-EASY")
         {
-            //Seed Database
+            //Seed Data Initializer
             //Database.SetInitializer<EFContext>( new EasyDataContextInitializer());
 
             //Proxy off

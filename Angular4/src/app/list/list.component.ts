@@ -34,8 +34,8 @@ export class ListComponent implements OnInit {
     }); 
   }
 
-  onDelete(name: string, id: number) {
-    if(confirm(" Are you sure you want to delete the developer "+ name +"?")) {            
+  onDelete(name: string, id: number) {    
+    if(confirm("Are you sure you want to delete the developer "+ name +"?")) {            
       this.DeveloperService.delete(id).then(response =>  this.ngOnInit() );       
     }
   } 

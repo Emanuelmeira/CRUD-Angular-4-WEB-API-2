@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Easy.Domain.Entities;
 using System.Collections.Generic;
 
 namespace Projeto.Infra.Interfaces

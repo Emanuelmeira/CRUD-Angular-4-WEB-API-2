@@ -1,10 +1,10 @@
-﻿using Domain.Entities;
+﻿using Easy.Domain.Entities;
 using Projeto.Infra.Exceptions;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WebApiAngular.Services;
+using Easy.Api.Services;
 
-namespace WebApiAngular.Controllers
+namespace Easy.Api.Controllers
 {
     public class DeveloperController : ApiController
     {

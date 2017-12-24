@@ -5,31 +5,31 @@ export class Knowledge {
 
     Id: number
     
-       Ionic: number 
-       Android: number 
-       Ios: number 
-       Html: number
-       Css: number
-       Bootstrap: number
-       Jquery: number
-       AngularJs: number
-       Java: number 
-       Aspnet: number
-       C: number
-       Cplusplus: number
-       Cake: number
-       Django: number
-       Majento: number
-       Php: number
-       Wordpress: number
-       Phyton: number
-       Ruby: number
-       SqlServer: number
-       MySql: number
-       Salesforce: number
-       Photoshop: number
-       Illustrator: number
-       Seo: number
+       ionic: number 
+       android: number 
+       ios: number 
+       html: number
+       css: number
+       bootstrap: number
+       jquery: number
+       angularJs: number
+       java: number 
+       aspnet: number
+       c: number
+       cplusplus: number
+       cake: number
+       django: number
+       majento: number
+       php: number
+       wordpress: number
+       phyton: number
+       ruby: number
+       sqlServer: number
+       mySql: number
+       salesforce: number
+       photoshop: number
+       illustrator: number
+       seo: number
     
-       OtherKnowledge: string
+       otherKnowledge: string
 }

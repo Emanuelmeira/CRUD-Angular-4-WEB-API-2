@@ -1,11 +1,11 @@
-﻿using Domain.Entities;
+﻿using Easy.Domain.Entities;
 using Projeto.Infra.Exceptions;
 using Projeto.Infra.Interfaces;
 using Projeto.Infra.Repository;
 using System.Collections.Generic;
-using WebApiAngular.Interfaces.Services;
+using Easy.Api.Interfaces.Services;
 
-namespace WebApiAngular.Services
+namespace Easy.Api.Services
 {
     public class DeveloperService : IService<Developer>
     {        

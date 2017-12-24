@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiAngular.Interfaces.Services
+namespace Easy.Api.Interfaces.Services
 {
     public interface IService<T>
     {

@@ -4,39 +4,39 @@ import { BankInf } from "app/model/bankInf.model";
 export class Developer {
 
     constructor() { 
-        this.BankInf = new BankInf();
-        this.Knowledge = new Knowledge();
+        this.bankInf = new BankInf();
+        this.knowledge = new Knowledge();
     }
 
-    Id: number
+    id: number
 
-    Email: string
-    Name: string
-    Skype: string
-    Phone: string
-    Linkedin: string
-    City: string
-    State: string
-    Portfolio: string
+    email: string
+    name: string
+    skype: string
+    phone: string
+    linkedin: string
+    city: string
+    state: string
+    portfolio: string
     
-    HourUntilFour: boolean;
-    HourFourToSix: boolean;
-    HourFourToEight: boolean;
-    HourAboveEight: boolean;
-    HoursOfWeekend: boolean;
+    hourUntilFour: boolean;
+    hourFourToSix: boolean;
+    hourFourToEight: boolean;
+    hourAboveEight: boolean;
+    hoursOfWeekend: boolean;
 
-    MorningPeriod: boolean;
-    AfternoonPeriod: boolean;
-    NightPeriod: boolean;
-    DawnPeriod: boolean;
-    BusinessPeriod: boolean;
+    morningPeriod: boolean;
+    afternoonPeriod: boolean;
+    nightPeriod: boolean;
+    dawnPeriod: boolean;
+    businessPeriod: boolean;
 
-    Pretension: number    
+    pretension: number    
 
-    Bank: string
+    bank: string
 
-    Crud: string
+    crud: string
     
-    Knowledge: Knowledge
-    BankInf: BankInf
+    knowledge: Knowledge
+    bankInf: BankInf
 }

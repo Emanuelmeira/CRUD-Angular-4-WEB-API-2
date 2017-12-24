@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace Easy.Domain.Entities
 {
     public class Knowledge 
     {

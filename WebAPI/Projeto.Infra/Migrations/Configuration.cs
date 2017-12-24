@@ -1,13 +1,20 @@
-﻿using Easy.Domain.Entities;
+using Easy.Domain.Entities;
 using Easy.Infra.Context;
-using System.Data.Entity;
+using System.Data.Entity.Migrations;
 
-namespace Easy.Infra.Mappings.Seed
+namespace Projeto.Infra.Migrations
 {
-    class EasyDataContextInitializer : DropCreateDatabaseIfModelChanges<EFContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EFContext>
     {
-        protected override void Seed(EFContext context)
+        public Configuration()
         {
+            AutomaticMigrationsEnabled = false;
+            ContextKey = "Easy.Infra.Context.EFContext";
+        }
+
+        protected override void Seed(EFContext context)
+        {  
+            
             context.BankInformation.Add(new BankInformation
             {
                 Id = 1,
@@ -73,7 +80,7 @@ namespace Easy.Infra.Mappings.Seed
                 HourFourToEight = true,
                 HourAboveEight = false,
                 HoursOfWeekend = true,
-                
+
                 MorningPeriod = true,
                 AfternoonPeriod = true,
                 NightPeriod = false,
@@ -82,7 +89,7 @@ namespace Easy.Infra.Mappings.Seed
 
                 Pretension = 40,
                 Bank = "dados do banco",
-                Crud = "www.gtihub.com/crud",                               
+                Crud = "www.gtihub.com/crud",
 
                 BankInformationId = 1,
                 KnowledgeId = 1

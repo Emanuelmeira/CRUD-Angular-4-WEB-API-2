@@ -56,6 +56,23 @@
     <Compile Include="Mappings\DeveloperMap.cs" />
     <Compile Include="Mappings\KnowledgeMap.cs" />
     <Compile Include="Mappings\Seed\EasyDataContextInitializer.cs" />
+    <Compile Include="Migrations\201712241502503_InitialCreate.cs" />
+    <Compile Include="Migrations\201712241502503_InitialCreate.Designer.cs">
+      <DependentUpon>201712241502503_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712241541029_Teste Migration.cs" />
+    <Compile Include="Migrations\201712241541029_Teste Migration.Designer.cs">
+      <DependentUpon>201712241541029_Teste Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712242200219_Data-EF.cs" />
+    <Compile Include="Migrations\201712242200219_Data-EF.Designer.cs">
+      <DependentUpon>201712242200219_Data-EF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712242213048_Changes-Developer.cs" />
+    <Compile Include="Migrations\201712242213048_Changes-Developer.Designer.cs">
+      <DependentUpon>201712242213048_Changes-Developer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BankInformationRepository.cs" />
     <Compile Include="Repository\DeveloperRepository.cs" />
@@ -70,6 +87,20 @@
       <Project>{f810b617-240b-4390-8059-277149e450c6}</Project>
       <Name>Easy.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712241502503_InitialCreate.resx">
+      <DependentUpon>201712241502503_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712241541029_Teste Migration.resx">
+      <DependentUpon>201712241541029_Teste Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712242200219_Data-EF.resx">
+      <DependentUpon>201712242200219_Data-EF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712242213048_Changes-Developer.resx">
+      <DependentUpon>201712242213048_Changes-Developer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

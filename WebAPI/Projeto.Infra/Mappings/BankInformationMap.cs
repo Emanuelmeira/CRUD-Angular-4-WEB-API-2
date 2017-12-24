@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Easy.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Projeto.Infra.Mappings

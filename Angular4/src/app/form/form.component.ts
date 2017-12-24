@@ -63,7 +63,7 @@ export class FormComponent implements OnInit {
           //page 2
           bankInf_name: ["Emanuel"],
           bankInf_cpf:  ["12345678901"],
-          bankInf_bank:  ["Emanuel meira"],
+          bankInf_bank:  ["Santander"],
           bankInf_agency:  ["0154"],
           bankInf_account:  ["21544444"],
           bankInf_chain:  [false],
@@ -112,81 +112,79 @@ export class FormComponent implements OnInit {
         if(this.id != undefined) this.onEdit(this.id);   
   }
 
-  onSubmit(){
+  onSubmit(){   
    
-   
-	  this.developer.Email = this.form.controls['email'].value;
-	  this.developer.Name = this.form.controls['name'].value;
-	  this.developer.Skype = this.form.controls['skype'].value;
-	  this.developer.Phone = this.form.controls['phone'].value;
-	  this.developer.Linkedin = this.form.controls['linkedin'].value;
-	  this.developer.City = this.form.controls['city'].value;
-	  this.developer.State = this.form.controls['state'].value;
-	  this.developer.Portfolio = this.form.controls['portfolio'].value;
+	  this.developer.email = this.form.controls['email'].value;
+	  this.developer.name = this.form.controls['name'].value;
+	  this.developer.skype = this.form.controls['skype'].value;
+	  this.developer.phone = this.form.controls['phone'].value;
+	  this.developer.linkedin = this.form.controls['linkedin'].value;
+	  this.developer.city = this.form.controls['city'].value;
+	  this.developer.state = this.form.controls['state'].value;
+	  this.developer.portfolio = this.form.controls['portfolio'].value;
 	
-    console.log(this.developer.HourUntilFour);
-    this.developer.HourUntilFour = this.form.controls['hourUntilFour'].value;
+    console.log(this.developer.hourUntilFour);
+    this.developer.hourUntilFour = this.form.controls['hourUntilFour'].value;
 
-
-	  this.developer.HourFourToSix = this.form.controls['hourFourToSix'].value;
-	  this.developer.HourFourToEight = this.form.controls['hourFourToEight'].value;
-	  this.developer.HourAboveEight = this.form.controls['hourAboveEight'].value;
-	  this.developer.HoursOfWeekend = this.form.controls['hoursOfWeekend'].value; 
+	  this.developer.hourFourToSix = this.form.controls['hourFourToSix'].value;
+	  this.developer.hourFourToEight = this.form.controls['hourFourToEight'].value;
+	  this.developer.hourAboveEight = this.form.controls['hourAboveEight'].value;
+	  this.developer.hoursOfWeekend = this.form.controls['hoursOfWeekend'].value; 
 		
-	  this.developer.MorningPeriod = this.form.controls['morningPeriod'].value;
-	  this.developer.AfternoonPeriod = this.form.controls['afternoonPeriod'].value;
-	  this.developer.NightPeriod = this.form.controls['nightPeriod'].value;
-	  this.developer.DawnPeriod = this.form.controls['dawnPeriod'].value;
-	  this.developer.BusinessPeriod = this.form.controls['businessPeriod'].value; 
+	  this.developer.morningPeriod = this.form.controls['morningPeriod'].value;
+	  this.developer.afternoonPeriod = this.form.controls['afternoonPeriod'].value;
+	  this.developer.nightPeriod = this.form.controls['nightPeriod'].value;
+	  this.developer.dawnPeriod = this.form.controls['dawnPeriod'].value;
+	  this.developer.businessPeriod = this.form.controls['businessPeriod'].value; 
 	
-  	this.developer.Pretension = this.form.controls['pretension'].value;
+  	this.developer.pretension = this.form.controls['pretension'].value;
 	
-    this.developer.Bank = this.form.controls['bank'].value;
+    this.developer.bank = this.form.controls['bank'].value;
 	
-  	this.developer.Crud = this.form.controls['crud'].value;
+  	this.developer.crud = this.form.controls['crud'].value;
 	
 	  //bank
-	  this.developer.BankInf.Name = this.form.controls['bankInf_name'].value;
-	  this.developer.BankInf.CPF = this.form.controls['bankInf_cpf'].value;
-	  this.developer.BankInf.Bank = this.form.controls['bankInf_bank'].value;
-	  this.developer.BankInf.Agency = this.form.controls['bankInf_agency'].value;
-	  this.developer.BankInf.Account = this.form.controls['bankInf_account'].value;
-  	this.developer.BankInf.Chain = this.form.controls['bankInf_chain'].value;
-  	this.developer.BankInf.Savings = this.form.controls['bankInf_savings'].value;
+	  this.developer.bankInf.name = this.form.controls['bankInf_name'].value;
+	  this.developer.bankInf.cpf = this.form.controls['bankInf_cpf'].value;
+	  this.developer.bankInf.bank = this.form.controls['bankInf_bank'].value;
+	  this.developer.bankInf.agency = this.form.controls['bankInf_agency'].value;
+	  this.developer.bankInf.account = this.form.controls['bankInf_account'].value;
+  	this.developer.bankInf.chain = this.form.controls['bankInf_chain'].value;
+  	this.developer.bankInf.savings = this.form.controls['bankInf_savings'].value;
 		
 	  //Knowledge
-  	this.developer.Knowledge.Ionic = this.form.controls['ionic'].value;
-  	this.developer.Knowledge.Android = this.form.controls['android'].value;
-    this.developer.Knowledge.Ios = this.form.controls['ios'].value;
-    this.developer.Knowledge.Html = this.form.controls['html'].value;
-    this.developer.Knowledge.Css = this.form.controls['css'].value;
-    this.developer.Knowledge.Bootstrap = this.form.controls['bootstrap'].value;
-	  this.developer.Knowledge.Jquery = this.form.controls['jquery'].value;
-	  this.developer.Knowledge.AngularJs = this.form.controls['angularJs'].value;
+  	this.developer.knowledge.ionic = this.form.controls['ionic'].value;
+  	this.developer.knowledge.android = this.form.controls['android'].value;
+    this.developer.knowledge.ios = this.form.controls['ios'].value;
+    this.developer.knowledge.html = this.form.controls['html'].value;
+    this.developer.knowledge.css = this.form.controls['css'].value;
+    this.developer.knowledge.bootstrap = this.form.controls['bootstrap'].value;
+	  this.developer.knowledge.jquery = this.form.controls['jquery'].value;
+	  this.developer.knowledge.angularJs = this.form.controls['angularJs'].value;
 	
-  	this.developer.Knowledge.Java = this.form.controls['java'].value;
-	  this.developer.Knowledge.Aspnet = this.form.controls['aspnet'].value;
-  	this.developer.Knowledge.C = this.form.controls['c'].value;
-  	this.developer.Knowledge.Cplusplus = this.form.controls['cplusplus'].value;
-  	this.developer.Knowledge.Cake = this.form.controls['cake'].value;
-	  this.developer.Knowledge.Django = this.form.controls['django'].value;
-  	this.developer.Knowledge.Majento = this.form.controls['majento'].value;
-  	this.developer.Knowledge.Php = this.form.controls['php'].value;
-  	this.developer.Knowledge.Wordpress = this.form.controls['wordpress'].value;
-  	this.developer.Knowledge.Phyton = this.form.controls['phyton'].value;
+  	this.developer.knowledge.java = this.form.controls['java'].value;
+	  this.developer.knowledge.aspnet = this.form.controls['aspnet'].value;
+  	this.developer.knowledge.c = this.form.controls['c'].value;
+  	this.developer.knowledge.cplusplus = this.form.controls['cplusplus'].value;
+  	this.developer.knowledge.cake = this.form.controls['cake'].value;
+	  this.developer.knowledge.django = this.form.controls['django'].value;
+  	this.developer.knowledge.majento = this.form.controls['majento'].value;
+  	this.developer.knowledge.php = this.form.controls['php'].value;
+  	this.developer.knowledge.wordpress = this.form.controls['wordpress'].value;
+  	this.developer.knowledge.phyton = this.form.controls['phyton'].value;
 	
-	  this.developer.Knowledge.Ruby = this.form.controls['ruby'].value;
-  	this.developer.Knowledge.SqlServer = this.form.controls['sqlServer'].value;
-  	this.developer.Knowledge.MySql = this.form.controls['mySql'].value;
-  	this.developer.Knowledge.Salesforce = this.form.controls['salesforce'].value;
-	  this.developer.Knowledge.Photoshop = this.form.controls['photoshop'].value;
-  	this.developer.Knowledge.Illustrator = this.form.controls['illustrator'].value;
-  	this.developer.Knowledge.Seo = this.form.controls['seo'].value;
-  	this.developer.Knowledge.OtherKnowledge = this.form.controls['otherKnowledge'].value; 
+	  this.developer.knowledge.ruby = this.form.controls['ruby'].value;
+  	this.developer.knowledge.sqlServer = this.form.controls['sqlServer'].value;
+  	this.developer.knowledge.mySql = this.form.controls['mySql'].value;
+  	this.developer.knowledge.salesforce = this.form.controls['salesforce'].value;
+	  this.developer.knowledge.photoshop = this.form.controls['photoshop'].value;
+  	this.developer.knowledge.illustrator = this.form.controls['illustrator'].value;
+  	this.developer.knowledge.seo = this.form.controls['seo'].value;
+  	this.developer.knowledge.otherKnowledge = this.form.controls['otherKnowledge'].value; 
    
     console.log(this.developer);
 
-    if(this.developer.Id){ 
+    if(this.developer.id){ 
       this.DeveloperService.update(this.developer).then(() => this.router.navigate(['/list']) );
     }else{      
       this.DeveloperService.add(this.developer).then(() => this.router.navigate(['/list']) );
@@ -201,74 +199,74 @@ export class FormComponent implements OnInit {
         
         console.log( this.developer);
 
-        this.form.get('email').setValue(this.developer.Email); 
-        this.form.get('name').setValue(this.developer.Name);		
-        this.form.get('skype').setValue(this.developer.Skype); 
-        this.form.get('phone').setValue(this.developer.Phone); 
-        this.form.get('linkedin').setValue(this.developer.Linkedin);
-        this.form.get('city').setValue(this.developer.City);
-        this.form.get('state').setValue(this.developer.State);
-        this.form.get('portfolio').setValue(this.developer.Portfolio);
+        this.form.get('email').setValue(this.developer.email); 
+        this.form.get('name').setValue(this.developer.name);		
+        this.form.get('skype').setValue(this.developer.skype); 
+        this.form.get('phone').setValue(this.developer.phone); 
+        this.form.get('linkedin').setValue(this.developer.linkedin);
+        this.form.get('city').setValue(this.developer.city);
+        this.form.get('state').setValue(this.developer.state);
+        this.form.get('portfolio').setValue(this.developer.portfolio);
         
-        this.form.get('hourUntilFour').setValue(this.developer.HourUntilFour);
-        this.form.get('hourFourToSix').setValue(this.developer.HourFourToSix);
-        this.form.get('hourFourToEight').setValue(this.developer.HourFourToEight);
-        this.form.get('hourAboveEight').setValue(this.developer.HourAboveEight);
-        this.form.get('hoursOfWeekend').setValue(this.developer.HoursOfWeekend);
+        this.form.get('hourUntilFour').setValue(this.developer.hourUntilFour);
+        this.form.get('hourFourToSix').setValue(this.developer.hourFourToSix);
+        this.form.get('hourFourToEight').setValue(this.developer.hourFourToEight);
+        this.form.get('hourAboveEight').setValue(this.developer.hourAboveEight);
+        this.form.get('hoursOfWeekend').setValue(this.developer.hoursOfWeekend);
         
-        this.form.get('morningPeriod').setValue(this.developer.MorningPeriod);
-        this.form.get('afternoonPeriod').setValue(this.developer.AfternoonPeriod);
-        this.form.get('nightPeriod').setValue(this.developer.NightPeriod);
-        this.form.get('dawnPeriod').setValue(this.developer.DawnPeriod);
-        this.form.get('businessPeriod').setValue(this.developer.BusinessPeriod);
+        this.form.get('morningPeriod').setValue(this.developer.morningPeriod);
+        this.form.get('afternoonPeriod').setValue(this.developer.afternoonPeriod);
+        this.form.get('nightPeriod').setValue(this.developer.nightPeriod);
+        this.form.get('dawnPeriod').setValue(this.developer.dawnPeriod);
+        this.form.get('businessPeriod').setValue(this.developer.businessPeriod);
         
         
-        this.form.get('pretension').setValue(this.developer.Pretension);
-        this.form.get('bank').setValue(this.developer.Bank);
+        this.form.get('pretension').setValue(this.developer.pretension);
+        this.form.get('bank').setValue(this.developer.bank);
         
         //bank
-        this.form.get('bankInf_name').setValue(this.developer.BankInf.Name);
-        this.form.get('bankInf_cpf').setValue(this.developer.BankInf.CPF);
-        this.form.get('bankInf_bank').setValue(this.developer.BankInf.Bank);
-        this.form.get('bankInf_agency').setValue(this.developer.BankInf.Agency);
-        this.form.get('bankInf_account').setValue(this.developer.BankInf.Account);
-        this.form.get('bankInf_chain').setValue(this.developer.BankInf.Chain);
-        this.form.get('bankInf_savings').setValue(this.developer.BankInf.Savings);
+        this.form.get('bankInf_name').setValue(this.developer.bankInf.name);
+        this.form.get('bankInf_cpf').setValue(this.developer.bankInf.cpf);
+        this.form.get('bankInf_bank').setValue(this.developer.bankInf.bank);
+        this.form.get('bankInf_agency').setValue(this.developer.bankInf.agency);
+        this.form.get('bankInf_account').setValue(this.developer.bankInf.account);
+        this.form.get('bankInf_chain').setValue(this.developer.bankInf.chain);
+        this.form.get('bankInf_savings').setValue(this.developer.bankInf.savings);
         
         
         //Knowlodge
-        this.form.get('ionic').setValue(this.developer.Knowledge.Ionic);
-        this.form.get('android').setValue(this.developer.Knowledge.Android);
-        this.form.get('ios').setValue(this.developer.Knowledge.Ios);
-        this.form.get('html').setValue(this.developer.Knowledge.Html);
-        this.form.get('css').setValue(this.developer.Knowledge.Css);
-        this.form.get('bootstrap').setValue(this.developer.Knowledge.Bootstrap);
-        this.form.get('jquery').setValue(this.developer.Knowledge.Jquery);
-        this.form.get('angularJs').setValue(this.developer.Knowledge.AngularJs);
+        this.form.get('ionic').setValue(this.developer.knowledge.ionic);
+        this.form.get('android').setValue(this.developer.knowledge.android);
+        this.form.get('ios').setValue(this.developer.knowledge.ios);
+        this.form.get('html').setValue(this.developer.knowledge.html);
+        this.form.get('css').setValue(this.developer.knowledge.css);
+        this.form.get('bootstrap').setValue(this.developer.knowledge.bootstrap);
+        this.form.get('jquery').setValue(this.developer.knowledge.jquery);
+        this.form.get('angularJs').setValue(this.developer.knowledge.angularJs);
        
        
-        this.form.get('java').setValue(this.developer.Knowledge.Java);
-        this.form.get('aspnet').setValue(this.developer.Knowledge.Aspnet);
-        this.form.get('c').setValue(this.developer.Knowledge.C);
-        this.form.get('cplusplus').setValue(this.developer.Knowledge.Cplusplus);
-        this.form.get('cake').setValue(this.developer.Knowledge.Cake);
-        this.form.get('django').setValue(this.developer.Knowledge.Django);
-        this.form.get('majento').setValue(this.developer.Knowledge.Majento);
-        this.form.get('php').setValue(this.developer.Knowledge.Php);
-        this.form.get('wordpress').setValue(this.developer.Knowledge.Wordpress);    
-        this.form.get('phyton').setValue(this.developer.Knowledge.Phyton);
+        this.form.get('java').setValue(this.developer.knowledge.java);
+        this.form.get('aspnet').setValue(this.developer.knowledge.aspnet);
+        this.form.get('c').setValue(this.developer.knowledge.c);
+        this.form.get('cplusplus').setValue(this.developer.knowledge.cplusplus);
+        this.form.get('cake').setValue(this.developer.knowledge.cake);
+        this.form.get('django').setValue(this.developer.knowledge.django);
+        this.form.get('majento').setValue(this.developer.knowledge.majento);
+        this.form.get('php').setValue(this.developer.knowledge.php);
+        this.form.get('wordpress').setValue(this.developer.knowledge.wordpress);    
+        this.form.get('phyton').setValue(this.developer.knowledge.phyton);
 
-        this.form.get('ruby').setValue(this.developer.Knowledge.Ruby);
-        this.form.get('sqlServer').setValue(this.developer.Knowledge.SqlServer);
-        this.form.get('mySql').setValue(this.developer.Knowledge.MySql);
-        this.form.get('salesforce').setValue(this.developer.Knowledge.Salesforce);
-        this.form.get('photoshop').setValue(this.developer.Knowledge.Photoshop);
-        this.form.get('illustrator').setValue(this.developer.Knowledge.Illustrator);
-        this.form.get('seo').setValue(this.developer.Knowledge.Seo);
-        this.form.get('otherKnowledge').setValue(this.developer.Knowledge.OtherKnowledge);
+        this.form.get('ruby').setValue(this.developer.knowledge.ruby);
+        this.form.get('sqlServer').setValue(this.developer.knowledge.sqlServer);
+        this.form.get('mySql').setValue(this.developer.knowledge.mySql);
+        this.form.get('salesforce').setValue(this.developer.knowledge.salesforce);
+        this.form.get('photoshop').setValue(this.developer.knowledge.photoshop);
+        this.form.get('illustrator').setValue(this.developer.knowledge.illustrator);
+        this.form.get('seo').setValue(this.developer.knowledge.seo);
+        this.form.get('otherKnowledge').setValue(this.developer.knowledge.otherKnowledge);
                 
         
-        this.form.get('crud').setValue(this.developer.Crud);
+        this.form.get('crud').setValue(this.developer.crud);
       
 
 

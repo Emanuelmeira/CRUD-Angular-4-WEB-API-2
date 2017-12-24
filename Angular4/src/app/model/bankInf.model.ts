@@ -3,14 +3,14 @@ export class BankInf {
     constructor() {        
     }
 
-    Id: number
+    id: number
     
-    Name: string
-    CPF: string
-    Bank: string
-    Agency: string
-    Account: string
+    name: string
+    cpf: string
+    bank: string
+    agency: string
+    account: string
 
-    Chain: false;
-    Savings: false;
+    chain: false;
+    savings: false;
 }

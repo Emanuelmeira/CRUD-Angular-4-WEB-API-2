@@ -1,5 +1,5 @@
-﻿using Domain.Entities;
-using Projeto.Infra.Context;
+﻿using Easy.Domain.Entities;
+using Easy.Infra.Context;
 using Projeto.Infra.Exceptions;
 using Projeto.Infra.Interfaces;
 using System;

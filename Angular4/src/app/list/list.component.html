@@ -27,22 +27,22 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let developer of developers">
-                        <th scope="row">{{ developer.Id }}</th>
-                        <td>{{ developer.Name }}</td>
-                        <td>{{ developer.Skype }}</td>
-                        <td>{{ developer.Phone }}</td>
-                        <td>{{ developer.Linkedin }}</td>
-                        <td>{{ developer.Email }}</td>
-                        <td>{{ developer.City }}</td>
-                        <td>{{ developer.State }}</td>
+                        <th scope="row">{{ developer.id }}</th>
+                        <td>{{ developer.name }}</td>
+                        <td>{{ developer.skype }}</td>
+                        <td>{{ developer.phone }}</td>
+                        <td>{{ developer.linkedin }}</td>
+                        <td>{{ developer.email }}</td>
+                        <td>{{ developer.city }}</td>
+                        <td>{{ developer.state }}</td>
 
-                        <td><button class="btn btn-primary" [routerLink]="['/save', developer.Id]">
+                        <td><button class="btn btn-primary" [routerLink]="['/save', developer.id]">
                                  <i class="glyphicon glyphicon-pencil"></i>
                             </button> |
-                            <button class="btn btn-info" [routerLink]="['/details', developer.Id]">
+                            <button class="btn btn-info" [routerLink]="['/details', developer.id]">
                                     <i class="glyphicon glyphicon-zoom-in"></i>    
                             </button> |
-                            <button (click)="onDelete(developer.Name, developer.Id )" class="btn btn-danger">
+                            <button (click)="onDelete(developer.name, developer.id )" class="btn btn-danger">
                                     <i class="glyphicon glyphicon-trash"></i>
                             </button>
                         </td>
