@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiAngular", "WebApiAngular\WebApiAngular.csproj", "{5EE7EC37-3722-4A17-A273-BD6A2755CF1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Api", "WebApiAngular\Easy.Api.csproj", "{5EE7EC37-3722-4A17-A273-BD6A2755CF1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F810B617-240B-4390-8059-277149E450C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Domain", "Domain\Easy.Domain.csproj", "{F810B617-240B-4390-8059-277149E450C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Infra", "Projeto.Infra\Projeto.Infra.csproj", "{A944A50C-F081-4067-9AD8-DBCF5A4381AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Infra", "Projeto.Infra\Easy.Infra.csproj", "{A944A50C-F081-4067-9AD8-DBCF5A4381AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

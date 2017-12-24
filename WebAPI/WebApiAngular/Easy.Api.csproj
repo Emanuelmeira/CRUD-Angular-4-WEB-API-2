@@ -121,13 +121,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
+    <ProjectReference Include="..\Domain\Easy.Domain.csproj">
       <Project>{f810b617-240b-4390-8059-277149e450c6}</Project>
-      <Name>Domain</Name>
+      <Name>Easy.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Projeto.Infra\Projeto.Infra.csproj">
+    <ProjectReference Include="..\Projeto.Infra\Easy.Infra.csproj">
       <Project>{a944a50c-f081-4067-9ad8-dbcf5a4381af}</Project>
-      <Name>Projeto.Infra</Name>
+      <Name>Easy.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
