@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Domain", "Domain\Easy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Infra", "Projeto.Infra\Easy.Infra.csproj", "{A944A50C-F081-4067-9AD8-DBCF5A4381AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.Selenium", "Easy.Selenium\Easy.Selenium.csproj", "{8BD398C3-A3F7-4484-9893-09333DA88D51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A944A50C-F081-4067-9AD8-DBCF5A4381AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A944A50C-F081-4067-9AD8-DBCF5A4381AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A944A50C-F081-4067-9AD8-DBCF5A4381AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD398C3-A3F7-4484-9893-09333DA88D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD398C3-A3F7-4484-9893-09333DA88D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD398C3-A3F7-4484-9893-09333DA88D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD398C3-A3F7-4484-9893-09333DA88D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
