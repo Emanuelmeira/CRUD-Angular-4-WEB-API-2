@@ -1,3 +1,0 @@
-```
-Duvidas? EmanuelMeira@outlook.com 
-```
