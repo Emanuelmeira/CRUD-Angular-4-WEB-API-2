@@ -14,16 +14,18 @@ namespace Easy.Selenium
         public IWebDriver Init()
         {
             driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
             driver.Url = baseURL;
-            
-            //TODO: maximizar driver
+
             return driver;
         }              
 
         [TestCleanup]
         public void Cleanup()
         {
-            driver.Close();// Quit();            
+
+            driver.Close();
+            driver.Quit();            
         }
 
 

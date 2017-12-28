@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Easy.Selenium.Interaction
 {    
-    public class InteratorBtn
+    public class InteractionBtn
     {
         #region Generic Methods 
         public static void ClickById(IWebDriver driver, string id)
@@ -50,7 +50,7 @@ namespace Easy.Selenium.Interaction
     }
 
 
-    public class InteratorInput
+    public class InteractionInput
     {
         #region Generic Methods 
         public static void WriteTxtById(IWebDriver driver, string id, string text)
@@ -67,6 +67,25 @@ namespace Easy.Selenium.Interaction
             element.SendKeys(text);
         }
         #endregion
+        
 
     }
+        public class Verify
+        {
+            public static bool CheckElementTable(IWebDriver driver, string name )
+            {
+                var elements = driver.FindElements(By.TagName("tr"));
+
+                foreach (var element in elements)
+                {
+                    bool contains = element.Text.Contains(name);
+
+                    if (contains)
+                        return true;
+                }
+
+                return false;
+            }
+
+        }
 }

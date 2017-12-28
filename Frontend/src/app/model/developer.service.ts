@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from "@angular/http";
-import { Product } from "app/model/product.model";
+
 
 import 'rxjs/add/operator/toPromise';
 import { Developer } from "app/model/developer.model";
@@ -28,7 +28,7 @@ export class DeveloperService {
         
         return this.http.post(this.url, JSON.stringify(developer), this.options  )
                .toPromise()
-               .then(response => <Product>response.json())
+               .then(response => <Developer>response.json())
                .catch(this.handleError) 
     }
  

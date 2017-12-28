@@ -6,83 +6,132 @@
     </div>
 </div>
 
-<div id="contact" class="row">
+<div class="row space">
 
     <div class="col-sm-3">
         <h4>Contact</h4>
-        <h5> <strong> Name: </strong> {{ developer.Name }} </h5>
-        <h5> <strong> Skype: </strong> {{ developer.Skype }} </h5>
-        <h5> <strong> Phone: </strong> {{ developer.Phone }} </h5>
-        <h5> <strong> Linkedin: </strong> {{ developer.Linkedin }} </h5>
-        <h5> <strong> Email: </strong> {{ developer.Email }} </h5>
-        <h5> <strong> City: </strong> {{ developer.City }} </h5>
-        <h5> <strong> State: </strong> {{ developer.State }} </h5>
+        <h5> <strong> Name: </strong> {{ developer.name }} </h5>
+        <h5> <strong> Skype: </strong> {{ developer.skype }} </h5>
+        <h5> <strong> Phone: </strong> {{ developer.phone }} </h5>
+        <h5> <strong> Linkedin: </strong> {{ developer.linkedin }} </h5>
+        <h5> <strong> Email: </strong> {{ developer.email }} </h5>
+        <h5> <strong> City: </strong> {{ developer.city }} </h5>
+        <h5> <strong> State: </strong> {{ developer.state }} </h5>
     </div>
 
     <div class="col-sm-3 ">
         <h4>Bank Information</h4>
-        <h5> <strong> Name Bank: </strong> {{ developer.BankInformation.Name }} </h5>
-        <h5> <strong> CPF: </strong> {{ developer.BankInformation.CPF }} </h5>
-        <h5> <strong> Bank: </strong> {{ developer.BankInformation.Bank }} </h5>
-        <h5> <strong> Agency: </strong> {{ developer.BankInformation.Agency }} </h5>
-        <h5> <strong> Account: </strong> {{ developer.BankInformation.Account }} </h5>
-        <h5> <strong> Chain: </strong> {{ developer.BankInformation.Chain }} </h5>
-        <h5> <strong> Savings: </strong> {{ developer.BankInformation.Savings }} </h5>
-    </div>
-    <div class="col-sm-6 ">
+        <h5> <strong> Name Bank: </strong> {{ developer.bankInf.same }} </h5>
+        <h5> <strong> CPF: </strong> {{ developer.bankInf.cpf }} </h5>
+        <h5> <strong> Bank: </strong> {{ developer.bankInf.bank }} </h5>
+        <h5> <strong> Agency: </strong> {{ developer.bankInf.agency }} </h5>
+        <h5> <strong> Account: </strong> {{ developer.bankInf.account }} </h5>
+        <h5 *ngIf="developer.bankInf.chain; else noChain"> <strong> Chain: </strong> Yes </h5>
+        <ng-template #noChain>
+            <h5> <strong> Chain: </strong> No </h5>
+        </ng-template>
 
-        <h4>perguntas??</h4>
-        <h5> {{ developer.HourUntilFour }} </h5>
-        <h4>perguntas??</h4>
-        <h5> {{ developer.HourFourToSix }} </h5>
-        <h4>ainda falta o resto ..</h4>
+        <h5 *ngIf="developer.bankInf.chain; else noSavings"> <strong> Savings: </strong> {{ developer.bankInf.savings }} </h5>
+        <ng-template #noSavings>
+            <h5> <strong> Savings: </strong> No </h5>
+        </ng-template>
+
     </div>
+
 </div>
+
 <hr>
 
-<div id="knowledge" class="row">
+<div class="row space">
+    <div class="col-sm-12 ">
 
-    <div class="col-sm-3">
-        <h4>Knowledge</h4>
-        <ul>
-            <h5> <strong> Ionic: </strong> {{ developer.Knowledge.Ionic }} </h5>
-            <h5> <strong> Android: </strong> {{ developer.Knowledge.Android }} </h5>
+        <h4>What is your willingness to work today? / Qual é sua disponibilidade para trabalhar hoje? *</h4>
+        <strong><p>Up to 4 hours per day / Até 4 horas por dia: </p> </strong>
+        <h5 *ngIf="developer.hourUntilFour; else no"> Yes </h5>
 
-            <h5> <strong> Ios: </strong> {{ developer.Knowledge.Ios }} </h5>
-            <h5> <strong> Html: </strong> {{ developer.Knowledge.Html }} </h5>
+        <strong><p>4 to 6 hours per day / De 4 á 6 horas por dia:</p></strong>
+        <h5 *ngIf="developer.hourFourToSix; else no"> Yes </h5>
 
-            <h5> <strong> Css: </strong> {{ developer.Knowledge.Css }} </h5>
-            <h5> <strong> Bootstrap: </strong> {{ developer.Knowledge.Bootstrap }} </h5>
+        <strong><p>6 to 8 hours per day /De 6 á 8 horas por dia: </p></strong>
+        <h5 *ngIf="developer.hourFourToEight; else no"> Yes </h5>
 
-            <h5> <strong> Jquery: </strong> {{ developer.Knowledge.Jquery }} </h5>
-            <h5> <strong> AngularJs: </strong> {{ developer.Knowledge.AngularJs }} </h5>
+        <strong> <p>Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?): </p></strong>
+        <h5 *ngIf="developer.hourAboveEight; else no"> Yes </h5>
 
-            <h5> <strong> Java: </strong> {{ developer.Knowledge.Java }} </h5>
-            <h5> <strong> Aspnet: </strong> {{ developer.Knowledge.Aspnet }} </h5>
+        <strong><p>Only weekends / Apenas finais de semana: </p></strong>
+        <h5 *ngIf="developer.hoursOfWeekend; else no"> Yes </h5>
 
-            <h5> <strong> C: </strong> {{ developer.Knowledge.C }} </h5>
-            <h5> <strong> Cplusplus: </strong> {{ developer.Knowledge.Cplusplus }} </h5>
-        </ul>
+        <hr>
+        <h4> What's the best time to work for you? / Pra você qual é o melhor horário para trabalhar? * </h4>
+
+        <strong> <p> Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00): </p></strong>
+        <h5 *ngIf="developer.morningPeriod; else no"> Yes </h5>
+
+        <strong><p>Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00) </p></strong>
+        <h5 *ngIf="developer.afternoonPeriod; else no"> Yes </h5>
+
+        <strong><p> Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00): </p></strong>
+        <h5 *ngIf="developer.nightPeriod; else no"> Yes </h5>
+
+        <strong><p> Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante): </p></strong>
+        <h5 *ngIf="developer.dawnPeriod; else no"> Yes </h5>
+
+        <strong><p> Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00): </p></strong>
+        <h5 *ngIf="developer.businessPeriod; else no"> Yes </h5>
+
+        <ng-template #no>
+            <h5> No </h5>
+        </ng-template>
+    </div>
+
+</div>
+
+<hr>
+
+<div class="row space">
+
+    <h4>Knowledge</h4>
+    <div class="col-sm-4">
+
+
+        <h5> <strong> Ionic: </strong> {{ developer.knowledge.ionic }} </h5>
+        <h5> <strong> Android: </strong> {{ developer.knowledge.android }} </h5>
+
+        <h5> <strong> Ios: </strong> {{ developer.knowledge.ios }} </h5>
+        <h5> <strong> Html: </strong> {{ developer.knowledge.html }} </h5>
+
+        <h5> <strong> Css: </strong> {{ developer.knowledge.css }} </h5>
+        <h5> <strong> Bootstrap: </strong> {{ developer.knowledge.bootstrap }} </h5>
+
+        <h5> <strong> Jquery: </strong> {{ developer.knowledge.jquery }} </h5>
+        <h5> <strong> AngularJs: </strong> {{ developer.knowledge.angularJs }} </h5>
+
+        <h5> <strong> Java: </strong> {{ developer.knowledge.java }} </h5>
+        <h5> <strong> Aspnet: </strong> {{ developer.knowledge.aspnet }} </h5>
+
+        <h5> <strong> C: </strong> {{ developer.knowledge.c }} </h5>
+        <h5> <strong> Cplusplus: </strong> {{ developer.knowledge.cplusplus }} </h5>
+
     </div>
 
     <div class="col-sm-3">
-        <h5> <strong> Majento: </strong> {{ developer.Knowledge.Majento }} </h5>
-        <h5> <strong> Php: </strong> {{ developer.Knowledge.Php }} </h5>
+        <h5> <strong> Majento: </strong> {{ developer.knowledge.majento }} </h5>
+        <h5> <strong> Php: </strong> {{ developer.knowledge.php }} </h5>
 
 
-        <h5> <strong> Wordpress: </strong> {{ developer.Knowledge.Wordpress }} </h5>
-        <h5> <strong> Phyton: </strong> {{ developer.Knowledge.Phyton }} </h5>
+        <h5> <strong> Wordpress: </strong> {{ developer.knowledge.wordpress }} </h5>
+        <h5> <strong> Phyton: </strong> {{ developer.knowledge.phyton }} </h5>
 
-        <h5> <strong> Ruby: </strong> {{ developer.Knowledge.Ruby }} </h5>
-        <h5> <strong> SqlServer: </strong> {{ developer.Knowledge.SqlServer }} </h5>
-        <h5> <strong> MySql: </strong> {{ developer.Knowledge.MySql }} </h5>
-        <h5> <strong> Salesforce: </strong> {{ developer.Knowledge.Salesforce }} </h5>
-        <h5> <strong> Photoshop: </strong> {{ developer.Knowledge.Photoshop }} </h5>
-        <h5> <strong> Illustrator: </strong> {{ developer.Knowledge.Illustrator }} </h5>
-        <h5> <strong> Seo: </strong> {{ developer.Knowledge.Seo }} </h5>
-        <h5> <strong> Other Knowledge: </strong> {{ developer.Knowledge.OtherKnowledge }} </h5>
-        <h5> <strong> Cake: </strong> {{ developer.Knowledge.Cake }} </h5>
-        <h5> <strong> Django: </strong> {{ developer.Knowledge.Django }} </h5>
+        <h5> <strong> Ruby: </strong> {{ developer.knowledge.ruby }} </h5>
+        <h5> <strong> SqlServer: </strong> {{ developer.knowledge.sqlServer }} </h5>
+        <h5> <strong> MySql: </strong> {{ developer.knowledge.mySql }} </h5>
+        <h5> <strong> Salesforce: </strong> {{ developer.knowledge.salesforce }} </h5>
+        <h5> <strong> Photoshop: </strong> {{ developer.knowledge.photoshop }} </h5>
+        <h5> <strong> Illustrator: </strong> {{ developer.knowledge.illustrator }} </h5>
+        <h5> <strong> Seo: </strong> {{ developer.knowledge.seo }} </h5>
+        <h5> <strong> Other knowledge: </strong> {{ developer.knowledge.otherknowledge }} </h5>
+        <h5> <strong> Cake: </strong> {{ developer.knowledge.cake }} </h5>
+        <h5> <strong> Django: </strong> {{ developer.knowledge.django }} </h5>
 
     </div>
 </div>

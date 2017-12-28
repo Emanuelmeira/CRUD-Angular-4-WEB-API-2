@@ -2,6 +2,7 @@
 using Easy.Selenium.Interaction;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using System;
 
 namespace Easy.Selenium.Test
 {
@@ -19,88 +20,152 @@ namespace Easy.Selenium.Test
         public void AddDeveloper()
         {
             IWebDriver driver = automationCore.Init();
-                        
-            InteratorBtn.ClickById(driver, "btn-add");
+
+            InteractionBtn.ClickById(driver, "btn-add");
 
             DeveloperTestDTO devoloper = new DeveloperTestDTO();
-            //continuar 
 
             //Set values page 1
-            InteratorInput.WriteTxtById(driver, "email", devoloper.Email);
-            InteratorInput.WriteTxtById(driver, "name", devoloper.Name);
-            InteratorInput.WriteTxtById(driver, "skype", "Skype-Carlos");
-            InteratorInput.WriteTxtById(driver, "phone", "71-993254865");
+            InteractionInput.WriteTxtById(driver, "email", devoloper.Email);
+            InteractionInput.WriteTxtById(driver, "name", devoloper.Name);
+            InteractionInput.WriteTxtById(driver, "skype", devoloper.Skype);
+            InteractionInput.WriteTxtById(driver, "phone", devoloper.Phone);
 
-            InteratorInput.WriteTxtById(driver, "linkedin", "https://br.linkedin.com/in/emanuel");
-            InteratorInput.WriteTxtById(driver, "city", "Salvador");
-            InteratorInput.WriteTxtById(driver, "state", "Bahia");
-            InteratorInput.WriteTxtById(driver, "portfolio", "Github.com/teste");
+            InteractionInput.WriteTxtById(driver, "linkedin", devoloper.Linkedin);
+            InteractionInput.WriteTxtById(driver, "city", devoloper.City);
+            InteractionInput.WriteTxtById(driver, "state", devoloper.State);
+            InteractionInput.WriteTxtById(driver, "portfolio", devoloper.Portfolio);
 
-            InteratorBtn.ClickById(driver, "hourUntilFour");
-            InteratorBtn.ClickById(driver, "hourFourToSix");
-            InteratorBtn.ClickById(driver, "hoursOfWeekend");
+            InteractionBtn.ClickById(driver, "hourUntilFour");
+            InteractionBtn.ClickById(driver, "hourFourToSix");
+            InteractionBtn.ClickById(driver, "hoursOfWeekend");
 
-            InteratorBtn.ClickById(driver, "morningPeriod");
-            InteratorBtn.ClickById(driver, "businessPeriod");
+            InteractionBtn.ClickById(driver, "morningPeriod");
+            InteractionBtn.ClickById(driver, "businessPeriod");
 
-            InteratorInput.WriteTxtById(driver, "pretension", "20");
-            InteratorInput.WriteTxtById(driver, "bank", "Banco santander 3432");
+            InteractionInput.WriteTxtById(driver, "pretension", devoloper.Pretension);
+            InteractionInput.WriteTxtById(driver, "bank", devoloper.Bank_Information);
 
             //To Page 2
             string xpathTable2 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[2]";
-            InteratorBtn.ClickByXpath(driver, xpathTable2);
+            InteractionBtn.ClickByXpath(driver, xpathTable2);
 
             //Set values page 2
-            InteratorInput.WriteTxtById(driver, "bankInf_name", "Emanuele Meira");
-            InteratorInput.WriteTxtById(driver, "bankInf_cpf", "038.798.835-14");
-            InteratorInput.WriteTxtById(driver, "bankInf_bank", "Santander");
-            InteratorInput.WriteTxtById(driver, "bankInf_agency", "4152");
-            InteratorBtn.ClickById(driver, "bankInf_chain");
-            InteratorInput.WriteTxtById(driver, "bankInf_account", "21544444");
+            InteractionInput.WriteTxtById(driver, "bankInf_name", devoloper.Name);
+            InteractionInput.WriteTxtById(driver, "bankInf_cpf", devoloper.Bank_cpf);
+            InteractionInput.WriteTxtById(driver, "bankInf_bank", devoloper.Bank_Name);
+            InteractionInput.WriteTxtById(driver, "bankInf_agency", devoloper.Bank_Agency);
+            InteractionBtn.ClickById(driver, "bankInf_chain");
+            InteractionInput.WriteTxtById(driver, "bankInf_account", devoloper.Bank_Account_Number);
 
             //To Page 3
             string xpathTable3 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[3]";
-            InteratorBtn.ClickByXpath(driver, xpathTable3);
+            InteractionBtn.ClickByXpath(driver, xpathTable3);
 
             //Set values page 3
-            InteratorBtn.ClickknowledgeSpecific(driver, "inoic", 3);
-            InteratorBtn.ClickknowledgeSpecific(driver, "android", 1);
-            InteratorBtn.ClickknowledgeSpecific(driver, "ios", 0);
-            InteratorBtn.ClickknowledgeRandom(driver, "html");
-            InteratorBtn.ClickknowledgeRandom(driver, "css");
-            InteratorBtn.ClickknowledgeRandom(driver, "bootstrap");
-            InteratorBtn.ClickknowledgeRandom(driver, "jquery");
-            InteratorBtn.ClickknowledgeRandom(driver, "angularJs");
-            InteratorBtn.ClickknowledgeRandom(driver, "java");
-            InteratorBtn.ClickknowledgeRandom(driver, "aspnet");
-            InteratorBtn.ClickknowledgeRandom(driver, "c");
-            InteratorBtn.ClickknowledgeRandom(driver, "cplusplus");
-            InteratorBtn.ClickknowledgeRandom(driver, "cake");
-            InteratorBtn.ClickknowledgeRandom(driver, "django");
-            InteratorBtn.ClickknowledgeRandom(driver, "majento");
-            InteratorBtn.ClickknowledgeRandom(driver, "php");
-            InteratorBtn.ClickknowledgeRandom(driver, "wordpress");
-            InteratorBtn.ClickknowledgeRandom(driver, "phyton");
-            InteratorBtn.ClickknowledgeRandom(driver, "ruby");
-            InteratorBtn.ClickknowledgeRandom(driver, "sqlServer");
-            InteratorBtn.ClickknowledgeRandom(driver, "mySql");
-            InteratorBtn.ClickknowledgeRandom(driver, "salesforce");
-            InteratorBtn.ClickknowledgeRandom(driver, "photoshop");
-            InteratorBtn.ClickknowledgeRandom(driver, "illustrator");
-            InteratorBtn.ClickknowledgeRandom(driver, "seo");
-            InteratorBtn.ClickknowledgeRandom(driver, "html");
+            InteractionBtn.ClickknowledgeSpecific(driver, "inoic", 3);
+            InteractionBtn.ClickknowledgeSpecific(driver, "android", 1);
+            InteractionBtn.ClickknowledgeSpecific(driver, "ios", 0);
+            InteractionBtn.ClickknowledgeRandom(driver, "html");
+            InteractionBtn.ClickknowledgeRandom(driver, "css");
+            InteractionBtn.ClickknowledgeRandom(driver, "bootstrap");
+            InteractionBtn.ClickknowledgeRandom(driver, "jquery");
+            InteractionBtn.ClickknowledgeRandom(driver, "angularJs");
+            InteractionBtn.ClickknowledgeRandom(driver, "java");
+            InteractionBtn.ClickknowledgeRandom(driver, "aspnet");
+            InteractionBtn.ClickknowledgeRandom(driver, "c");
+            InteractionBtn.ClickknowledgeRandom(driver, "cplusplus");
+            InteractionBtn.ClickknowledgeRandom(driver, "cake");
+            InteractionBtn.ClickknowledgeRandom(driver, "django");
+            InteractionBtn.ClickknowledgeRandom(driver, "majento");
+            InteractionBtn.ClickknowledgeRandom(driver, "php");
+            InteractionBtn.ClickknowledgeRandom(driver, "wordpress");
+            InteractionBtn.ClickknowledgeRandom(driver, "phyton");
+            InteractionBtn.ClickknowledgeRandom(driver, "ruby");
+            InteractionBtn.ClickknowledgeRandom(driver, "sqlServer");
+            InteractionBtn.ClickknowledgeRandom(driver, "mySql");
+            InteractionBtn.ClickknowledgeRandom(driver, "salesforce");
+            InteractionBtn.ClickknowledgeRandom(driver, "photoshop");
+            InteractionBtn.ClickknowledgeRandom(driver, "illustrator");
+            InteractionBtn.ClickknowledgeRandom(driver, "seo");
+            InteractionBtn.ClickknowledgeRandom(driver, "html");
 
-            InteratorInput.WriteTxtById(driver, "otherKnowledge", "Xamarin Forms");
-            InteratorInput.WriteTxtById(driver, "crud", "githut.com/crud");
+            InteractionInput.WriteTxtById(driver, "otherKnowledge", devoloper.Other_knowledge);
+            InteractionInput.WriteTxtById(driver, "crud", devoloper.Crud);
 
-            InteratorBtn.ClickById(driver, "submit-dev");
+            InteractionBtn.ClickById(driver, "submit-dev");
 
-            //Verificação de inclusão 
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
-            //Assert.AreEqual(driver.Title, "Developers");
+            bool developerInTable = Verify.CheckElementTable(driver, devoloper.Name);
+            
+            Assert.IsTrue(developerInTable);
             automationCore.Cleanup();
         }
 
+        [TestMethod]
+        public void EditDeveloper()
+        {
+            IWebDriver driver = automationCore.Init();
 
+            InteractionBtn.ClickById(driver, "btn-edit");
+
+            DeveloperTestDTO devoloper = new DeveloperTestDTO();
+
+            //Set values page 1
+            InteractionInput.WriteTxtById(driver, "email", "pedro@teste.com");
+            InteractionInput.WriteTxtById(driver, "name", "edit name");
+            InteractionInput.WriteTxtById(driver, "skype", "Edit Skype");
+
+            InteractionInput.WriteTxtById(driver, "city", "miami beach ;)");
+            InteractionInput.WriteTxtById(driver, "state", "Florida");
+
+            //To Page 2
+            string xpathTable2 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[2]";
+            InteractionBtn.ClickByXpath(driver, xpathTable2);
+
+            //Set values page 2            
+            InteractionInput.WriteTxtById(driver, "bankInf_bank", "edit bank name");
+            InteractionBtn.ClickById(driver, "bankInf_chain");
+
+            //To Page 3
+            string xpathTable3 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[3]";
+            InteractionBtn.ClickByXpath(driver, xpathTable3);
+
+            //Set values page 3            
+            InteractionBtn.ClickknowledgeRandom(driver, "html");
+            InteractionBtn.ClickknowledgeRandom(driver, "css");
+            InteractionBtn.ClickknowledgeRandom(driver, "bootstrap");
+            InteractionBtn.ClickknowledgeRandom(driver, "jquery");
+            InteractionBtn.ClickknowledgeRandom(driver, "java");
+            InteractionBtn.ClickknowledgeRandom(driver, "aspnet");
+            InteractionBtn.ClickknowledgeRandom(driver, "wordpress");
+            InteractionBtn.ClickknowledgeRandom(driver, "ruby");
+            InteractionBtn.ClickknowledgeRandom(driver, "sqlServer");
+            InteractionBtn.ClickknowledgeRandom(driver, "mySql");
+            InteractionBtn.ClickknowledgeRandom(driver, "seo");
+            InteractionBtn.ClickknowledgeRandom(driver, "html");
+
+            InteractionInput.WriteTxtById(driver, "otherKnowledge", "IA");
+
+            InteractionBtn.ClickById(driver, "submit-dev");
+
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            
+            //TODO: quebrando
+            bool developerInTable = Verify.CheckElementTable(driver, "pedro@teste.com");
+
+            Assert.IsTrue(developerInTable);
+            automationCore.Cleanup();
+        }
+
+        [TestMethod]
+        public void DetailsDeveloper()
+        {
+            IWebDriver driver = automationCore.Init();
+
+            InteractionBtn.ClickById(driver, "btn-details");
+            automationCore.Cleanup();
+        }
     }
 }

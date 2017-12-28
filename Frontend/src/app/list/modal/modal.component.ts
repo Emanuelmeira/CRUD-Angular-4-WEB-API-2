@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from "ngx-bootstrap/modal";
-import { Product } from "app/model/product.model";
 import { Developer } from "app/model/developer.model";
 
 

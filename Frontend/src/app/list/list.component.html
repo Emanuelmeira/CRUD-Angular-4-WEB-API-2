@@ -36,10 +36,10 @@
                         <td>{{ developer.city }}</td>
                         <td>{{ developer.state }}</td>
 
-                        <td><button class="btn btn-primary" [routerLink]="['/save', developer.id]">
+                        <td><button id="btn-edit" class="btn btn-primary" [routerLink]="['/save', developer.id]">
                                  <i class="glyphicon glyphicon-pencil"></i>
                             </button> |
-                            <button class="btn btn-info" [routerLink]="['/details', developer.id]">
+                            <button id="btn-details" class="btn btn-info" [routerLink]="['/details', developer.id]">
                                     <i class="glyphicon glyphicon-zoom-in"></i>    
                             </button> |
                             <button (click)="onDelete(developer.name, developer.id )" class="btn btn-danger">

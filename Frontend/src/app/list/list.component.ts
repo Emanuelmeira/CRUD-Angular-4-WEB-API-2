@@ -1,6 +1,4 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { ProductService } from "app/model/product.service";
-
 import { BsModalService } from 'ngx-bootstrap/modal';
 //import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { BsModalRef } from 'ngx-bootstrap/modal';
@@ -21,8 +19,7 @@ export class ListComponent implements OnInit {
   
   bsModalRef: BsModalRef;
 
-  constructor(
-    private ProductService: ProductService,
+  constructor(    
     private DeveloperService: DeveloperService,
     private modalService: BsModalService
   ) { }
