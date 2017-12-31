@@ -7,13 +7,13 @@ namespace Easy.Infra.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class changevaluecpf : IMigrationMetadata
+    public sealed partial class EntitiesValues : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changevaluecpf));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EntitiesValues));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712260033524_change-value-cpf"; }
+            get { return "201712312057073_Entities-Values"; }
         }
         
         string IMigrationMetadata.Source

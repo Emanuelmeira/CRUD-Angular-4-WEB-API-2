@@ -37,7 +37,7 @@ namespace Easy.Infra.Mappings
             Property(x => x.Illustrator);
             Property(x => x.Seo);
 
-            Property(x => x.OtherKnowledge).HasMaxLength(60).IsRequired();            
+            Property(x => x.OtherKnowledge).HasMaxLength(60);            
 
         }
     }

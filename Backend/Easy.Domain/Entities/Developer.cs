@@ -14,16 +14,13 @@
         public string City { get; set; }
         public string State { get; set; }
         public string Portfolio { get; set; }
-
-        //Qual é sua disponibilidade para trabalhar hoje? *
-
+        
         public bool HourUntilFour { get; set; }
         public bool HourFourToSix { get; set; }
-        public bool HourFourToEight { get; set; }
+        public bool HourSixToEight { get; set; }
         public bool HourAboveEight { get; set; }
         public bool HoursOfWeekend { get; set; }
-
-        //Pra você qual é o melhor horário para trabalhar? *
+               
 
         public bool MorningPeriod { get; set; }
         public bool AfternoonPeriod { get; set; }

@@ -37,7 +37,7 @@ namespace Easy.Infra.Migrations
                         Portfolio = c.String(nullable: false, maxLength: 30),
                         HourUntilFour = c.Boolean(nullable: false),
                         HourFourToSix = c.Boolean(nullable: false),
-                        HourFourToEight = c.Boolean(nullable: false),
+                        HourSixToEight = c.Boolean(nullable: false),
                         HourAboveEight = c.Boolean(nullable: false),
                         HoursOfWeekend = c.Boolean(nullable: false),
                         MorningPeriod = c.Boolean(nullable: false),

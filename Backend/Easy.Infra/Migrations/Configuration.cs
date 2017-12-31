@@ -77,7 +77,7 @@ namespace Easy.Infra.Migrations
 
                 HourUntilFour = true,
                 HourFourToSix = false,
-                HourFourToEight = true,
+                HourSixToEight = true,
                 HourAboveEight = false,
                 HoursOfWeekend = true,
 

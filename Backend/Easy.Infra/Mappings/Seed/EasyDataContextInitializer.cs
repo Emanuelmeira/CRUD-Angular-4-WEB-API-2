@@ -70,7 +70,7 @@ namespace Easy.Infra.Mappings.Seed
 
                 HourUntilFour = true,
                 HourFourToSix = false,
-                HourFourToEight = true,
+                HourSixToEight = true,
                 HourAboveEight = false,
                 HoursOfWeekend = true,
                 
