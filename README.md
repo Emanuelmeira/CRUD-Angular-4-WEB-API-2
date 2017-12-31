@@ -73,16 +73,10 @@ IMPORTANTE:
 
 ## Imagens
 
-![NetWork](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/network.PNG)
+![NetWork](https://github.com/Emanuelmeira/Easy-teste/img/network.PNG)
 
 
 ```
 Duvidas? EmanuelMeira@outlook.com 
 ```
-
-
-
-
-
-
 
