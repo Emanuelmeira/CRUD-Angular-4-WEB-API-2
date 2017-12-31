@@ -9,6 +9,7 @@ namespace Easy.Api.Controllers
     public class DeveloperController : ApiController
     {
         public DeveloperService DeveloperService;
+
         public DeveloperController()
         {
             DeveloperService = new DeveloperService();

@@ -17,7 +17,7 @@ namespace Easy.Infra.Mappings
             HasKey(x => x.Id);
             Property(x => x.Email).HasMaxLength(40).IsRequired();
             Property(x => x.Name).HasMaxLength(40).IsRequired();
-            Property(x => x.Skype).HasMaxLength(305).IsRequired();
+            Property(x => x.Skype).HasMaxLength(30).IsRequired();
             Property(x => x.Phone).HasMaxLength(30).IsRequired();
 
             Property(x => x.Linkedin).HasMaxLength(50).IsRequired();
