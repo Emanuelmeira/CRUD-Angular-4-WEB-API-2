@@ -11,12 +11,20 @@
 
 ## Projeto ASP.NET Web API 2
 
+ * .NET Framework, v4.6.1
  * ASP.NET Web API 2 (C#).
  * Code First e Migrations com Entity Framework 6.
  * Visual Studio 2017.
 
-### Design Patterns
-Service, Dependency Injection, Factory e Repository para divisão de responsabilidades gerando uma arquitetura simples e escalável. 
+## Arquitetura 
+
+O Projeto da API esta dividido em 3 camadas principais. 
+
+1. Controllers: Responsáveis por receber as requisições  e em caminhar para as próximas camadas.
+
+2. Services: Responsáveis por receber os dados dos Controllers e processar/aplicar regra de negocio e enviar a próxima camada.
+
+3. Repositórios: Responsáveis por Fazer o acesso a dados do sistema.
 
 ## Executando o Projeto
 
@@ -42,6 +50,12 @@ Abra um terminal a partir da pasta do projeto 'Frontend' e execute seguinte coma
 ```
 npm install
 ```
+
+Ao final da instalação ira aparecer algo como .. 
+
+![Instalação Angular](https://github.com/Emanuelmeira/Easy-teste/img/install-scripts.PNG)
+
+Isso pode demorar um pouco. ;)  
 
 IMPORTANTE: 
 
