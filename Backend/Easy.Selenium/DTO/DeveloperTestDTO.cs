@@ -28,7 +28,13 @@ namespace Easy.Selenium.DTO
 
             this.Crud = "www.github.com/teste";
             this.Other_knowledge = "Xamarin Forms";
+
+            this.knowledgeDTO = new KnowledgeDTO();
+            this.bankInformationDTO = new BankInformationDTO();
+
         }
+
+        public int Id { get; set; }
 
         public string Email { get; set; }
         public string Name { get; set; }
@@ -48,5 +54,11 @@ namespace Easy.Selenium.DTO
 
         public string Other_knowledge { get; set; }
         public string Crud { get; set; }
+
+        public int KnowledgeId { get; set; }
+        KnowledgeDTO knowledgeDTO;
+
+        public int BankInformationId { get; set; }
+        BankInformationDTO bankInformationDTO;
     }
 }

@@ -69,23 +69,5 @@ namespace Easy.Selenium.Interaction
         #endregion
         
 
-    }
-        public class Verify
-        {
-            public static bool CheckElementTable(IWebDriver driver, string name )
-            {
-                var elements = driver.FindElements(By.TagName("tr"));
-
-                foreach (var element in elements)
-                {
-                    bool contains = element.Text.Contains(name);
-
-                    if (contains)
-                        return true;
-                }
-
-                return false;
-            }
-
-        }
+    }        
 }

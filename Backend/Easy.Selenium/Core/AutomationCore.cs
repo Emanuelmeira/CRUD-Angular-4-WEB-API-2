@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace Easy.Selenium
+namespace Easy.Selenium.Core
 {
    //[TestClass]
     public class AutomationCore

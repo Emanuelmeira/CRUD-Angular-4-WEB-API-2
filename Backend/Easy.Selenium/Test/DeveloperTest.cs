@@ -1,4 +1,6 @@
-﻿using Easy.Selenium.DTO;
+﻿using Easy.Selenium.Core;
+using Easy.Selenium.DAL;
+using Easy.Selenium.DTO;
 using Easy.Selenium.Interaction;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -7,13 +9,15 @@ using System;
 namespace Easy.Selenium.Test
 {
     [TestClass]
-    public class DeveloperTest //TODO: implementar isso aqui AutomationCore 
+    public class DeveloperTest 
     {
         AutomationCore automationCore;
+        DataAcess data;
 
         public DeveloperTest()
         {
             automationCore = new AutomationCore();
+            data = new DataAcess();
         }
 
         [TestMethod]
@@ -23,18 +27,18 @@ namespace Easy.Selenium.Test
 
             InteractionBtn.ClickById(driver, "btn-add");
 
-            DeveloperTestDTO devoloper = new DeveloperTestDTO();
+            DeveloperTestDTO developer = new DeveloperTestDTO();
 
             //Set values page 1
-            InteractionInput.WriteTxtById(driver, "email", devoloper.Email);
-            InteractionInput.WriteTxtById(driver, "name", devoloper.Name);
-            InteractionInput.WriteTxtById(driver, "skype", devoloper.Skype);
-            InteractionInput.WriteTxtById(driver, "phone", devoloper.Phone);
+            InteractionInput.WriteTxtById(driver, "email", developer.Email);
+            InteractionInput.WriteTxtById(driver, "name", "EmanuelMeira");
+            InteractionInput.WriteTxtById(driver, "skype", developer.Skype);
+            InteractionInput.WriteTxtById(driver, "phone", developer.Phone);
 
-            InteractionInput.WriteTxtById(driver, "linkedin", devoloper.Linkedin);
-            InteractionInput.WriteTxtById(driver, "city", devoloper.City);
-            InteractionInput.WriteTxtById(driver, "state", devoloper.State);
-            InteractionInput.WriteTxtById(driver, "portfolio", devoloper.Portfolio);
+            InteractionInput.WriteTxtById(driver, "linkedin", developer.Linkedin);
+            InteractionInput.WriteTxtById(driver, "city", developer.City);
+            InteractionInput.WriteTxtById(driver, "state", developer.State);
+            InteractionInput.WriteTxtById(driver, "portfolio", developer.Portfolio);
 
             InteractionBtn.ClickById(driver, "hourUntilFour");
             InteractionBtn.ClickById(driver, "hourFourToSix");
@@ -43,20 +47,20 @@ namespace Easy.Selenium.Test
             InteractionBtn.ClickById(driver, "morningPeriod");
             InteractionBtn.ClickById(driver, "businessPeriod");
 
-            InteractionInput.WriteTxtById(driver, "pretension", devoloper.Pretension);
-            InteractionInput.WriteTxtById(driver, "bank", devoloper.Bank_Information);
+            InteractionInput.WriteTxtById(driver, "pretension", developer.Pretension);
+            InteractionInput.WriteTxtById(driver, "bank", developer.Bank_Information);
 
             //To Page 2
             string xpathTable2 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[2]";
             InteractionBtn.ClickByXpath(driver, xpathTable2);
 
             //Set values page 2
-            InteractionInput.WriteTxtById(driver, "bankInf_name", devoloper.Name);
-            InteractionInput.WriteTxtById(driver, "bankInf_cpf", devoloper.Bank_cpf);
-            InteractionInput.WriteTxtById(driver, "bankInf_bank", devoloper.Bank_Name);
-            InteractionInput.WriteTxtById(driver, "bankInf_agency", devoloper.Bank_Agency);
+            InteractionInput.WriteTxtById(driver, "bankInf_name", developer.Name);
+            InteractionInput.WriteTxtById(driver, "bankInf_cpf", developer.Bank_cpf);
+            InteractionInput.WriteTxtById(driver, "bankInf_bank", developer.Bank_Name);
+            InteractionInput.WriteTxtById(driver, "bankInf_agency", developer.Bank_Agency);
             InteractionBtn.ClickById(driver, "bankInf_chain");
-            InteractionInput.WriteTxtById(driver, "bankInf_account", devoloper.Bank_Account_Number);
+            InteractionInput.WriteTxtById(driver, "bankInf_account", developer.Bank_Account_Number);
 
             //To Page 3
             string xpathTable3 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[3]";
@@ -90,16 +94,16 @@ namespace Easy.Selenium.Test
             InteractionBtn.ClickknowledgeRandom(driver, "seo");
             InteractionBtn.ClickknowledgeRandom(driver, "html");
 
-            InteractionInput.WriteTxtById(driver, "otherKnowledge", devoloper.Other_knowledge);
-            InteractionInput.WriteTxtById(driver, "crud", devoloper.Crud);
+            InteractionInput.WriteTxtById(driver, "otherKnowledge", developer.Other_knowledge);
+            InteractionInput.WriteTxtById(driver, "crud", developer.Crud);
 
             InteractionBtn.ClickById(driver, "submit-dev");
 
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
 
-            bool developerInTable = Verify.CheckElementTable(driver, devoloper.Name);
-            
-            Assert.IsTrue(developerInTable);
+            bool isValid = data.ExistDeveloperByName("EmanuelMeira");
+
+            Assert.IsTrue(isValid);
             automationCore.Cleanup();
         }
 
@@ -114,7 +118,7 @@ namespace Easy.Selenium.Test
 
             //Set values page 1
             InteractionInput.WriteTxtById(driver, "email", "pedro@teste.com");
-            InteractionInput.WriteTxtById(driver, "name", "edit name");
+            InteractionInput.WriteTxtById(driver, "name", "Teste name");
             InteractionInput.WriteTxtById(driver, "skype", "Edit Skype");
 
             InteractionInput.WriteTxtById(driver, "city", "miami beach ;)");
@@ -150,12 +154,11 @@ namespace Easy.Selenium.Test
 
             InteractionBtn.ClickById(driver, "submit-dev");
 
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            
-            //TODO: quebrando
-            bool developerInTable = Verify.CheckElementTable(driver, "pedro@teste.com");
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
 
-            Assert.IsTrue(developerInTable);
+            bool isValid = data.ExistDeveloperByName("Test name");
+
+            Assert.IsTrue(isValid);
             automationCore.Cleanup();
         }
 
