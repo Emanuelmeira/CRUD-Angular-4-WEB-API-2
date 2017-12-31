@@ -1,7 +1,8 @@
-﻿using Easy.Selenium.Core;
+﻿using Easy.Domain.Entities;
+using Easy.Selenium.Core;
 using Easy.Selenium.DAL;
-using Easy.Selenium.DTO;
 using Easy.Selenium.Interaction;
+using Easy.Selenium.MockEtities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System;
@@ -12,12 +13,14 @@ namespace Easy.Selenium.Test
     public class DeveloperTest 
     {
         AutomationCore automationCore;
+        MockDeveloper mockDeveloper;
         DataAcess data;
 
         public DeveloperTest()
         {
             automationCore = new AutomationCore();
             data = new DataAcess();
+            mockDeveloper  = new MockDeveloper();
         }
 
         [TestMethod]
@@ -27,7 +30,7 @@ namespace Easy.Selenium.Test
 
             InteractionBtn.ClickById(driver, "btn-add");
 
-            DeveloperTestDTO developer = new DeveloperTestDTO();
+            Developer developer = mockDeveloper.Prepare();
 
             //Set values page 1
             InteractionInput.WriteTxtById(driver, "email", developer.Email);
@@ -47,8 +50,8 @@ namespace Easy.Selenium.Test
             InteractionBtn.ClickById(driver, "morningPeriod");
             InteractionBtn.ClickById(driver, "businessPeriod");
 
-            InteractionInput.WriteTxtById(driver, "pretension", developer.Pretension);
-            InteractionInput.WriteTxtById(driver, "bank", developer.Bank_Information);
+            InteractionInput.WriteTxtById(driver, "pretension", Convert.ToString(developer.Pretension));
+            InteractionInput.WriteTxtById(driver, "bank", developer.Bank);
 
             //To Page 2
             string xpathTable2 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[2]";
@@ -56,11 +59,11 @@ namespace Easy.Selenium.Test
 
             //Set values page 2
             InteractionInput.WriteTxtById(driver, "bankInf_name", developer.Name);
-            InteractionInput.WriteTxtById(driver, "bankInf_cpf", developer.Bank_cpf);
-            InteractionInput.WriteTxtById(driver, "bankInf_bank", developer.Bank_Name);
-            InteractionInput.WriteTxtById(driver, "bankInf_agency", developer.Bank_Agency);
+            InteractionInput.WriteTxtById(driver, "bankInf_cpf", developer.BankInf.CPF);
+            InteractionInput.WriteTxtById(driver, "bankInf_bank", developer.BankInf.Bank);
+            InteractionInput.WriteTxtById(driver, "bankInf_agency", developer.BankInf.Agency);
             InteractionBtn.ClickById(driver, "bankInf_chain");
-            InteractionInput.WriteTxtById(driver, "bankInf_account", developer.Bank_Account_Number);
+            InteractionInput.WriteTxtById(driver, "bankInf_account", developer.BankInf.Account);
 
             //To Page 3
             string xpathTable3 = "/html/body/app-root/div/div[2]/div/app-form/div[2]/div/form/tabset/ul/li[3]";
@@ -94,7 +97,7 @@ namespace Easy.Selenium.Test
             InteractionBtn.ClickknowledgeRandom(driver, "seo");
             InteractionBtn.ClickknowledgeRandom(driver, "html");
 
-            InteractionInput.WriteTxtById(driver, "otherKnowledge", developer.Other_knowledge);
+            InteractionInput.WriteTxtById(driver, "otherKnowledge", developer.Knowledge.OtherKnowledge);
             InteractionInput.WriteTxtById(driver, "crud", developer.Crud);
 
             InteractionBtn.ClickById(driver, "submit-dev");
@@ -112,9 +115,7 @@ namespace Easy.Selenium.Test
         {
             IWebDriver driver = automationCore.Init();
 
-            InteractionBtn.ClickById(driver, "btn-edit");
-
-            DeveloperTestDTO devoloper = new DeveloperTestDTO();
+            InteractionBtn.ClickById(driver, "btn-edit");            
 
             //Set values page 1
             InteractionInput.WriteTxtById(driver, "email", "pedro@teste.com");

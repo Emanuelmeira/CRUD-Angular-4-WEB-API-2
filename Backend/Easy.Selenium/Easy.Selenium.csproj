@@ -68,10 +68,8 @@
   <ItemGroup>
     <Compile Include="Core\AutomationCore.cs" />
     <Compile Include="DAL\DataAcess.cs" />
-    <Compile Include="DTO\BankInformationDTO.cs" />
-    <Compile Include="DTO\KnowledgeDTO.cs" />
+    <Compile Include="MockEtities\MockDeveloper.cs" />
     <Compile Include="Test\DeveloperTest.cs" />
-    <Compile Include="DTO\DeveloperTestDTO.cs" />
     <Compile Include="Interaction\Interaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

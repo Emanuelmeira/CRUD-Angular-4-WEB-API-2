@@ -7,12 +7,7 @@ using System.Data.SqlClient;
 namespace Easy.Selenium.DAL
 {
     public class DataAcess
-    {
-        public DataAcess()
-        {
-
-        }
-        
+    {        
         static string ConnectionString = ConfigurationManager.ConnectionStrings["CRUD-EASY"].ConnectionString;
 
         public bool ExistDeveloperByName(string name)
@@ -21,7 +16,6 @@ namespace Easy.Selenium.DAL
 
             try
             {
-
                 using (var sqlConnection = new SqlConnection(ConnectionString))
                 {
                     sqlConnection.Open();
@@ -32,8 +26,7 @@ namespace Easy.Selenium.DAL
                     return developer != null;
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception)            {
 
                 throw new Exception();
             }

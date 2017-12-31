@@ -23,7 +23,6 @@ namespace Easy.Selenium.Core
         [TestCleanup]
         public void Cleanup()
         {
-
             driver.Close();
             driver.Quit();            
         }
