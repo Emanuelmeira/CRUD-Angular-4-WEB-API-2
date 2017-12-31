@@ -155,7 +155,7 @@ namespace Easy.Selenium.Test
 
             InteractionBtn.ClickById(driver, "submit-dev");
 
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
             bool isValid = data.ExistDeveloperByName("Test name");
 
@@ -167,6 +167,7 @@ namespace Easy.Selenium.Test
         public void DetailsDeveloper()
         {
             IWebDriver driver = automationCore.Init();
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
             InteractionBtn.ClickById(driver, "btn-details");
             automationCore.Cleanup();
