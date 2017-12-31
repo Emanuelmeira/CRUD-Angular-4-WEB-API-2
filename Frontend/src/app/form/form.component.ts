@@ -18,6 +18,7 @@ export class FormComponent implements OnInit {
   developer = new Developer();
   title: string;
   id: number = 0;
+  fieldAlert:string = 'This field is required';
  
   constructor(
     private formBuilder: FormBuilder,    
@@ -31,22 +32,21 @@ export class FormComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.id = params['id'];
     });  
-       
 
         this.form = this.formBuilder.group({
           // page 1
-          email: ["emanuelmeira@outlook.com"],
-          name: ["emanuel"],          
-          skype: ["Skype"],
-          phone: ["557199325148"],
-          linkedin: ["https://br.linkedin.com/in/emanuelmeira"],
-          city: ["Salvaodr"],
-          state: ["Bahia"],
-          portfolio: ["Github.com"], 
+          email: [null, Validators.required], 
+          name: [null, Validators.required],
+          skype: [null, Validators.required],
+          phone: [null],
+          linkedin: [null],
+          city: [null, Validators.required],
+          state: [null, Validators.required],
+          portfolio: [null],
 
           hourUntilFour: [false],
           hourFourToSix: [false],
-          hourFourToEight: [false],
+          hourSixToEight: [false],
           hourAboveEight: [false],
           hoursOfWeekend: [false], 
 
@@ -56,31 +56,31 @@ export class FormComponent implements OnInit {
           dawnPeriod: [false],
           businessPeriod: [false],
 
-          pretension: [20],
+          pretension: [0, Validators.required],
 
-          bank: ["n sei oq botar aqui"],
+          bank: [null ],
 
           //page 2
-          bankInf_name: ["Emanuel"],
-          bankInf_cpf:  ["12345678901"],
-          bankInf_bank:  ["Santander"],
-          bankInf_agency:  ["0154"],
-          bankInf_account:  ["21544444"],
+          bankInf_name: [null],
+          bankInf_cpf:  [null],
+          bankInf_bank:  [null],
+          bankInf_agency:  [null],
+          bankInf_account:  [null],
           bankInf_chain:  [false],
           bankInf_savings:  [false],
 
           //page 3
-          ionic: [null],
-          android: [null],
-          ios: [null],
+          ionic: [null , Validators.required],
+          android: [null, Validators.required],
+          ios: [null, Validators.required],
           html: [null],
           css: [null],
 
-          bootstrap: [null],
-          jquery: [null],
-          angularJs: [null],
+          bootstrap: [null , Validators.required],
+          jquery: [null, Validators.required],
+          angularJs: [null, Validators.required],
           java: [null],
-          aspnet: [null],
+          aspnet: [null, Validators.required],
 
           c: [null],
           cplusplus: [null],
@@ -88,8 +88,8 @@ export class FormComponent implements OnInit {
           django: [null],
           majento: [null],
         
-          php: [null],
-          wordpress: [null],
+          php: [null , Validators.required],
+          wordpress: [null, Validators.required],
           phyton: [null],
           ruby: [null],
           sqlServer: [null],
@@ -100,12 +100,11 @@ export class FormComponent implements OnInit {
           illustrator: [null],
           seo: [null],
         
-          otherKnowledge: ["Selenium"],
+          otherKnowledge: [null],
  
-          crud: ["www.crud.com"]
+          crud: [null, ]
 
         });  
-
 
         this.title = this.id ? 'Edit Developer' : 'New Developer';
 
@@ -122,12 +121,11 @@ export class FormComponent implements OnInit {
 	  this.developer.city = this.form.controls['city'].value;
 	  this.developer.state = this.form.controls['state'].value;
 	  this.developer.portfolio = this.form.controls['portfolio'].value;
-	
-    console.log(this.developer.hourUntilFour);
+	    
     this.developer.hourUntilFour = this.form.controls['hourUntilFour'].value;
 
 	  this.developer.hourFourToSix = this.form.controls['hourFourToSix'].value;
-	  this.developer.hourFourToEight = this.form.controls['hourFourToEight'].value;
+	  this.developer.hourSixToEight = this.form.controls['hourSixToEight'].value;
 	  this.developer.hourAboveEight = this.form.controls['hourAboveEight'].value;
 	  this.developer.hoursOfWeekend = this.form.controls['hoursOfWeekend'].value; 
 		
@@ -182,7 +180,7 @@ export class FormComponent implements OnInit {
   	this.developer.knowledge.seo = this.form.controls['seo'].value;
   	this.developer.knowledge.otherKnowledge = this.form.controls['otherKnowledge'].value; 
    
-    console.log(this.developer);
+    //console.log(this.developer);
 
     if(this.developer.id){ 
       this.DeveloperService.update(this.developer).then(() => this.router.navigate(['/list']) );
@@ -210,7 +208,7 @@ export class FormComponent implements OnInit {
         
         this.form.get('hourUntilFour').setValue(this.developer.hourUntilFour);
         this.form.get('hourFourToSix').setValue(this.developer.hourFourToSix);
-        this.form.get('hourFourToEight').setValue(this.developer.hourFourToEight);
+        this.form.get('hourSixToEight').setValue(this.developer.hourSixToEight);
         this.form.get('hourAboveEight').setValue(this.developer.hourAboveEight);
         this.form.get('hoursOfWeekend').setValue(this.developer.hoursOfWeekend);
         
@@ -266,8 +264,7 @@ export class FormComponent implements OnInit {
         this.form.get('otherKnowledge').setValue(this.developer.knowledge.otherKnowledge);
                 
         
-        this.form.get('crud').setValue(this.developer.crud);
-      
+        this.form.get('crud').setValue(this.developer.crud);     
 
 
       }); 

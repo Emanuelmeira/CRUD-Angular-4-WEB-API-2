@@ -3,52 +3,6 @@
         <h3 id="labelForm">{{ title }}</h3>
     </div>
 </div>
-<!--
-<form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
-
-    <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-10">
-            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="descricao" class="col-sm-2 control-label">Description</label>
-        <div class="col-sm-10">
-            <input type="text" formControlName="descricao" class="form-control" id="descricao" placeholder="Descrição">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="codigo" class="col-sm-2 control-label">Code</label>
-        <div class="col-sm-10">
-            <input type="text" formControlName="codigo" class="form-control" id="codigo" placeholder="Codigo">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="preco" class="col-sm-2 control-label">Price</label>
-        <div class="col-sm-10">
-            <input type="text" formControlName="preco" class="form-control" id="preco" placeholder="Preço">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary btn-block"> Register</button>
-            <button type="button" class="btn btn-default btn-block" (click)="reset()">Cancel</button>
-        </div>
-    </div>
-</form>
--->
 
 <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
@@ -58,58 +12,64 @@
                 <tab heading="Occupation Area >>">
                     <!-- Table 1 -->
                     <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">Email*</label>
+                        <label for="email" class="col-sm-2 control-label">Email<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" formControlName="email" maxlength="40" class="form-control" id="email" placeholder="Email">
+                            <span *ngIf="!form.controls['email'].valid && form.controls['email'].touched">{{fieldAlert}} </span>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">name*</label>
+                        <label for="name" class="col-sm-2 control-label">Name<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
+                            <input type="text" formControlName="name" maxlength="40" class="form-control" id="name" placeholder="Nome">
+                            <span *ngIf="!form.controls['name'].valid && form.controls['name'].touched"> {{fieldAlert}} </span>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="skype" class="col-sm-2 control-label">skype*</label>
+                        <label for="skype" class="col-sm-2 control-label">Skype<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="skype" class="form-control" id="skype" placeholder="Skype">
+                            <input type="text" formControlName="skype" maxlength="30" class="form-control" id="skype" placeholder="Skype">
+                            <span *ngIf="!form.controls['skype'].valid && form.controls['skype'].touched"> {{fieldAlert}} </span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="phone" class="col-sm-2 control-label">Phone</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Phone">
+                            <input type="text" formControlName="phone" maxlength="30" class="form-control" id="phone" placeholder="Phone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="linkedin" class="col-sm-2 control-label">Linkedin</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="linkedin" class="form-control" id="linkedin" placeholder="Linkedin">
+                            <input type="text" formControlName="linkedin" maxlength="50" class="form-control" id="linkedin" placeholder="Linkedin">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="city" class="col-sm-2 control-label">City*</label>
+                        <label for="city" class="col-sm-2 control-label">City<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="city" class="form-control" id="city" placeholder="City">
+                            <input type="text" formControlName="city" maxlength="15" class="form-control" id="city" placeholder="City">
+                            <span *ngIf="!form.controls['city'].valid && form.controls['city'].touched"> {{fieldAlert}} </span>
+
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="state" class="col-sm-2 control-label">State*</label>
+                        <label for="state" class="col-sm-2 control-label">State<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="state" class="form-control" id="state" placeholder="State">
+                            <input type="text" formControlName="state" maxlength="10" class="form-control" id="state" placeholder="State">
+                            <span *ngIf="!form.controls['state'].valid && form.controls['state'].touched"> {{fieldAlert}} </span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="portfolio" class="col-sm-2 control-label">Portfolio</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="portfolio" class="form-control" id="portfolio" placeholder="Portfolio">
+                            <input type="text" formControlName="portfolio" maxlength="50" class="form-control" id="portfolio" placeholder="Portfolio">
                         </div>
                     </div>
 
@@ -127,7 +87,7 @@
                                 <label><input formControlName="hourFourToSix" id="hourFourToSix" type="checkbox" >4 to 6 hours per day / De 4 á 6 horas por dia</label>
                             </div>
                             <div class="checkbox">
-                                <label><input formControlName="hourFourToEight" id="hourFourToEight" type="checkbox" >6 to 8 hours per day /De 6 á 8 horas por dia</label>
+                                <label><input formControlName="hourSixToEight" id="hourSixToEight" type="checkbox" >6 to 8 hours per day /De 6 á 8 horas por dia</label>
                             </div>
 
                             <div class="checkbox">
@@ -168,47 +128,52 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="pretension" class="col-sm-2 control-label">Pretension*</label>
+                        <label for="pretension" class="col-sm-2 control-label">Pretension<span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <input type="number" formControlName="pretension" class="form-control" id="pretension" placeholder="Pretension">
+                            <input type="number" formControlName="pretension" required class="form-control" id="pretension" placeholder="Pretension">
+                            <span *ngIf="!form.controls['pretension'].valid && form.controls['pretension'].touched"> {{fieldAlert}} </span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="bank" class="col-sm-2 control-label">Bank Information</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bank" class="form-control" id="bank" placeholder="Bank Information">
+                            <input type="text" formControlName="bank" maxlength="50" class="form-control" id="bank" placeholder="Bank Information">
                         </div>
                     </div>
                 </tab>
                 <tab heading="Bank Information  >>">
                     <!-- Table 2 -->
-
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-2">
+                            <h4>Required if Brazilian bank</h4>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="bankInf_name" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bankInf_name" class="form-control" id="bankInf_name" placeholder="Name">
+                            <input type="text" formControlName="bankInf_name" maxlength="30" class="form-control" id="bankInf_name" placeholder="Name">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="bankInf_cpf" class="col-sm-2 control-label">CPF</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bankInf_cpf" class="form-control" id="bankInf_cpf" placeholder="CPF">
+                            <input type="text" formControlName="bankInf_cpf" maxlength="15" class="form-control" id="bankInf_cpf" placeholder="CPF">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="bankInf_bank" class="col-sm-2 control-label">Name Bank</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bankInf_bank" class="form-control" id="bankInf_bank" placeholder="Bank">
+                            <input type="text" formControlName="bankInf_bank" maxlength="15" class="form-control" id="bankInf_bank" placeholder="Bank">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="bankInf_agency" class="col-sm-2 control-label">Agency</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bankInf_agency" class="form-control" id="bankInf_agency" placeholder="Agency">
+                            <input type="text" formControlName="bankInf_agency" maxlength="10" class="form-control" id="bankInf_agency" placeholder="Agency">
                         </div>
                     </div>
 
@@ -230,7 +195,7 @@
                     <div class="form-group">
                         <label for="bankInf_account" class="col-sm-2 control-label">Account Number</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="bankInf_account" class="form-control" id="bankInf_account" placeholder="Account Number">
+                            <input type="text" formControlName="bankInf_account" maxlength="25" class="form-control" id="bankInf_account" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -240,7 +205,7 @@
                     <!-- Table 3 -->
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>Ionic*</h4>
+                            <h4>Ionic <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -256,7 +221,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>Android*</h4>
+                            <h4>Android <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -273,7 +238,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>Ios*</h4>
+                            <h4>Ios <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -322,7 +287,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>Bootstrap</h4>
+                            <h4>Bootstrap <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -339,7 +304,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>Jquery</h4>
+                            <h4>Jquery <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -355,7 +320,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>angularJs</h4>
+                            <h4>angularJs <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -389,7 +354,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>aspnet</h4>
+                            <h4>aspnet <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -491,7 +456,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>php</h4>
+                            <h4>php <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -508,7 +473,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-2">
-                            <h4>wordpress</h4>
+                            <h4>wordpress <span class="required">*</span></h4>
                         </div>
 
                         <div class="col-sm-7 col-sm-offset-2">
@@ -661,23 +626,23 @@
                     <div class="form-group">
                         <label for="otherknowledge" class="col-sm-2 control-label">Other knowledge</label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="otherKnowledge" class="form-control" id="otherKnowledge" placeholder="Other knowledge">
+                            <input type="text" formControlName="otherKnowledge" maxlength="60" class="form-control" id="otherKnowledge" placeholder="Other knowledge">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="crud" class="col-sm-2 control-label">Link Crud </label>
                         <div class="col-sm-9">
-                            <input type="text" formControlName="crud" class="form-control" id="crud" placeholder="Crud">
+                            <input type="text" formControlName="crud" class="form-control" maxlength="50" id="crud" placeholder="Crud">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-2">
-                            <button id="submit-dev" type="submit" class="btn btn-primary btn-block"> Register</button>
+                            <button [disabled]="!form.valid" id="submit-dev" type="submit" class="btn btn-primary btn-block "> Register</button>
                         </div>
-                        <div class=" col-sm-2">
-                            <button type="button" class="btn btn-default btn-block" (click)="reset()">Cancel</button>
+                        <div class=" col-sm-2 ">
+                            <button type="button " class="btn btn-default btn-block" (click)="reset() ">Cancel</button>
                         </div>
                     </div>
 

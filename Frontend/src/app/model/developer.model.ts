@@ -21,7 +21,7 @@ export class Developer {
     
     hourUntilFour: boolean;
     hourFourToSix: boolean;
-    hourFourToEight: boolean;
+    hourSixToEight: boolean;
     hourAboveEight: boolean;
     hoursOfWeekend: boolean;
 
@@ -31,10 +31,8 @@ export class Developer {
     dawnPeriod: boolean;
     businessPeriod: boolean;
 
-    pretension: number    
-
+    pretension: number 
     bank: string
-
     crud: string
     
     knowledge: Knowledge
