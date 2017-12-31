@@ -12,7 +12,7 @@
 ## Projeto ASP.NET Web API 2
 
  * ASP.NET Web API 2 (C#).
- * Code First com Entity Framework 6.0.0.0.
+ * Code First e Migrations com Entity Framework 6.
  * Visual Studio 2017.
 
 ### Design Patterns
@@ -37,16 +37,17 @@ Sua API já esta ativa e funcional ;)
 
 * Angular 2/4.
 
-Abra um terminal a partir da pasta do projeto Angular4 e execute seguinte comando para baixar as dependências.
+Abra um terminal a partir da pasta do projeto 'Frontend' e execute seguinte comando para baixar as dependências.
 
 ```
 npm install
 ```
 
-IMPORTANTE: Após a restauração dos pacotes acessar o arquivo 'product.service.ts' em 'Angular4\src\app\model' para 
-alteração do host da API.
+IMPORTANTE: 
 
-Após alteração do host executar o seguinte comando para iniciar a aplicação.
+Por padrão a API esta iniciando na porta "51694". URL já configurada no projeto FrontEnd.
+
+Agora é só executar o seguinte comando para iniciar a aplicação.
 
 ```
 ng server
@@ -55,13 +56,24 @@ ng server
 Acessar o endereço http://localhost:4200/ para visualizar a aplicação. :)
 
 
+## Teste Selenium
+
+Com a API e o sistema Frontend já em execução, para iniciar os testes basta apenas: 
+
+Em Test > Run > 'All Test'.
+
+O Visual Studio irá reconhecer os testes e executa-los.
+
+IMPORTANTE: 
+
+1. Por padrão os testes em selenium estam executando no browser Chome.
+
+2. Na execução dos testes o ChromeDriver costuma ficar preso nos processos. É importante sempre encerrar o processo quando existe muitas execuções.
+
+
 ## Imagens
 
-![Listing](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Listing.PNG)
-
-![new](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/new.PNG)
-
-![Details](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Details.PNG)
+![NetWork](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/network.PNG)
 
 
 ```
