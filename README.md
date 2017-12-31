@@ -53,7 +53,7 @@ npm install
 
 Ao final da instalação ira aparecer algo como .. 
 
-![Instalação Angular](https://github.com/Emanuelmeira/Easy-teste/img/install-scripts.PNG)
+![Instalação Angular](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/install-scripts.PNG)
 
 Isso pode demorar um pouco. ;)  
 
@@ -87,7 +87,7 @@ IMPORTANTE:
 
 ## Imagens
 
-![NetWork](https://github.com/Emanuelmeira/Easy-teste/img/network.PNG)
+![NetWork](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/network.PNG)
 
 
 ```
