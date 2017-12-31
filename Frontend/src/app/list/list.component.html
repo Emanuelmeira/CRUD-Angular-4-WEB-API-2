@@ -51,7 +51,7 @@
                 </tbody>
             </table>
 
-            <h3 *ngIf="developers == null"> Developers Not Found </h3>
+            <h3 *ngIf="developers?.length == 0"> Developers Not Found </h3>
 
             <hr>
             <button id="btn-add" [routerLink]="['/save']" class="btn btn-info">
