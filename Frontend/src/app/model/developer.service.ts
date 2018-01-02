@@ -23,7 +23,7 @@ export class DeveloperService {
        this.options = new RequestOptions({ headers: this.headers });
    }
 
-   // POST product
+   // POST developer
     add(developer: Developer): Promise<Developer> {       
         
         return this.http.post(this.url, JSON.stringify(developer), this.options  )
@@ -32,7 +32,7 @@ export class DeveloperService {
                .catch(this.handleError) 
     }
  
-    // PUT product
+    // PUT developer
     update(developer: Developer): Promise<void> {       
         
         return this.http.put(this.url, JSON.stringify(developer), this.options  )
@@ -42,7 +42,7 @@ export class DeveloperService {
     }
     
 
-    // GET ALL product
+    // GET ALL developer
     getAll(): Promise<Developer[]> {    
         
         return  this.http.get(this.url, this.options )
@@ -52,7 +52,7 @@ export class DeveloperService {
     }
 
  
-    // GET product
+    // GET developer
     getById(id: number): Promise<Developer>{
        
       return  this.http.get(this.getUrl(id), this.options )
@@ -61,7 +61,7 @@ export class DeveloperService {
               .catch(this.handleError);       
     } 
  
-    // DELETE product
+    // DELETE developer
     delete(id: number){
          
       return   this.http.delete(this.getUrl(id), this.options )
