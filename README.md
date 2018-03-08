@@ -55,7 +55,7 @@ npm install
 
 Ao final da instalação ira aparecer algo como .. 
 
-![Instalação Angular](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/install-scripts.PNG)
+![Instalação Angular](https://github.com/Emanuelmeira/CRUD-Angular-4-WEB-API-2/blob/master/img/install-scripts.PNG)
 
 Isso pode demorar um pouco. ;)  
 
@@ -91,7 +91,7 @@ IMPORTANTE:
 
 ## Imagens
 
-![List](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/list.PNG)
+![List](https://github.com/Emanuelmeira/CRUD-Angular-4-WEB-API-2/blob/master/img/list.PNG)
 
 
 ```
