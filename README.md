@@ -14,7 +14,9 @@
  * .NET Framework, v4.6.1
  * ASP.NET Web API 2 (C#).
  * Code First e Migrations com Entity Framework 6.
+ * FluentMap
  * Visual Studio 2017.
+ * SQLSERVR 2016
 
 ## Arquitetura 
 
@@ -24,7 +26,7 @@ O Projeto da API esta dividido em 3 camadas principais.
 
 2. Services: Responsáveis por receber os dados dos Controllers e processar/aplicar regra de negocio e enviar a próxima camada.
 
-3. Repositórios: Responsáveis por Fazer o acesso a dados do sistema.
+3. Repositories: Responsáveis por Fazer o acesso a dados do sistema.
 
 ## Executando o Projeto
 
@@ -72,6 +74,8 @@ Acessar o endereço http://localhost:4200/ para visualizar a aplicação. :)
 
 ## Teste Selenium
 
+O projeto Selenium conta com arquitetura própria podendo assim ser reutilizado para automação de testes em qualquer projeto WEB seja ele C# ou JAVA. As Classes de interações podem ser facilmente manipuladas, adaptando assim a necessidade de cada projeto.
+
 Com a API e o sistema Frontend já em execução, para iniciar os testes basta apenas: 
 
 Em Test > Run > 'All Test'.
@@ -87,10 +91,10 @@ IMPORTANTE:
 
 ## Imagens
 
-![NetWork](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/network.PNG)
+![List](https://github.com/Emanuelmeira/Easy-teste/blob/master/img/list.PNG)
 
 
 ```
-Duvidas? EmanuelMeira@outlook.com 
+Duvidas? emmitmeira@gmail.com / emanuelMeira@outlook.com
 ```
 

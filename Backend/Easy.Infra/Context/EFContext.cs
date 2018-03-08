@@ -7,7 +7,7 @@ namespace Easy.Infra.Context
 {
     public class EFContext : DbContext
     {        
-        public EFContext() : base("CRUD-EASY")
+        public EFContext() : base("CRUD")
         {
             //Seed Data Initializer
             //Database.SetInitializer<EFContext>( new EasyDataContextInitializer());
